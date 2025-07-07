@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - JapaneseMealReservation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/main.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/JapaneseMealReservation.styles.css" asp-append-version="true" />
+    <link href="~/css/style.css" rel="stylesheet" asp-append-version="true" />
+
+</head>
+
+<body>
+  
+
+    @if (ViewData["ShowDashboardHeader"] as bool? == true)
+    {
+        <header class="fixed-top">
+            <nav class="">
+
+               
+                <div class="d-flex justify-content-between align-items-center bg-dark text-warning p-4">
+                    <div class="d-flex justify-content-between align-items-center gap-2">
+                        <a asp-controller="Home" asp-action="Index">
+                            <img src="~/images/JMRS-logo.png" class="jrms-logo" alt="Japanese Meal Reservation System" />
+                        </a>
+                       
+                        <div class="d-flex ms-auto">
+                            @if (User?.Identity?.IsAuthenticated == true)
+                            {
+                                var firstName = User.FindFirst(System.Security.Claims.ClaimTypes.GivenName)?.Value;
+                                var lastName = User.FindFirst(System.Security.Claims.ClaimTypes.Surname)?.Value;
+
+                                <span class="navbar-text text-white me-3 logged-in-user">
+                                    👋 Welcome, <strong>@firstName @lastName</strong>
+                                 </span>
+                            }
+                        </div>
+
+                        @* Language Flags *@
+                        @*<div class="language-switcher" style="text-align:right; padding:10px;">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="English" style="cursor:pointer;" onclick="changeLanguage('en')" title="English">
+                            <img src="https://flagcdn.com/w40/jp.png" alt="日本語" style="cursor:pointer;" onclick="changeLanguage('ja')" title="Japanese">
+                        </div>*@
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center gap-2">
+                        <ul class="navbar-nav ms-auto d-flex flex-row align-items-center g-2">
+                            @* Google Translate Container *@
+                            <li>
+                                <div id="google_translate_element" class="google-translate-box d-flex justify-content-start align-items-center mx-1"><span>Translate: </span>&nbsp;</div>
+                            </li>
+
+                            <li class="nav-item mx-2 header-menu">
+                                <a class="nav-link text-light link-warning" asp-controller="Home" asp-action="Index">
+                                    <i class="fa-solid fa-house"></i> Home
+                                </a>
+                            </li>
+
+                            <li class="nav-item mx-2 header-menu">
+                                        <a class="nav-link text-light link-warning" asp-controller="Reservation" asp-action="MealReservation">
+                                    <i class="fa-solid fa-calendar-week"></i> Menu
+                                </a>
+                            </li>
+
+                            <li class="nav-item mx-2 header-menu">
+                                            <a class="nav-link text-light link-warning" asp-controller="Order" asp-action="OrderSummary">
+                                    <i class="fa-solid fa-cart-shopping"></i> My Orders
+                                </a>
+                            </li>
+                        </ul>
+
+
+                       @*  @if (ViewData["ShowBookNow"] as bool? == true)
+                        { *@
+                            <a class="book-now btn btn-warning" style="border-radius: 25px; padding: 8px 15px; outline: none;" 
+                            asp-controller="Reservation" 
+                            asp-action="AdvanceOrdering">
+                                Book Now
+                            </a>
+                       @*  } *@
+                       
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("ADMIN"))
+                        {
+                           @*  @if (ViewData["ShowLoginAdmin"] as bool? == true)
+                            { *@
+                                @* <div data-bs-toggle="modal" data-bs-target="#loginModal" class="admin">
+                                    <i class="fa-solid fa-user"></i> Admin Dashboard
+                                </div> *@
+
+                                <a class="admin-dashboard btn btn-primary" style="border-radius: 25px; margin: 0 5px; padding: 8px 15px; outline: none;" asp-controller="Admin" asp-action="Dashboard">
+                                    Admin Dashboard
+                                </a>
+                           @*  } *@
+                        }
+
+                        @if (User?.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                            <form method="post" asp-controller="Home" asp-action="Logout">
+                                <button type="submit" class="logout btn btn-danger" style="cursor:pointer; border-radius: 25px; padding: 8px 15px;">Logout</button>
+                            </form>
+                        }
+                    </div>
+
+                </div>
+
+            </nav>
+        </header>
+    }
+
+    <div class="">
+        <main role="main" class="">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+    <footer class="footer-fix d-flex justify-content-between align-items-center">
+        <span class="text-muted"> &copy; 2025 - BIPH - Japanese Meal Reservation | Developed by: BPS Application Developer</span>
+        <a href="#"
+           class="manual-btn rounded-pill px-3 py-1 shadow-sm d-inline-flex align-items-center gap-2 border border-warning text-warning text-decoration-none">
+            <i class="fa-solid fa-book"></i> Manual
+        </a>
+    </footer>
+
+
+    <!-- ⚙️ Google Translate Setup Script -->
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'en,ja',
+              layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL // or SIMPLE, VERTICAL
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- ⚙️ Google Translate Setup Script End -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script>
+    @* Fontawesome *@
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <!-- Sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- PrintThis -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.min.js"></script>
+    <script src="~/js/printTable.js"></script>
+
+    <!-- xlsx.full -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+ 
+    <script src="~/js/custom.js"></script>
+
+   
+    @if (ViewData["Title"] as string == "Reservation")  
+    {
+        <script src="~/js/updateMenuModalHandler.js"></script>
+        <script src="~/js/orderValidation.js"></script>
+    }
+
+    @if (ViewData["Title"] as string == "Dashboard")
+    {
+        <script src="~/js/updateDashboardModal.js"></script>
+    }
+
+    @if (ViewData["Title"] as string == "Registration")
+    {
+        <script>
+                  window.appBaseUrl = '@Url.Content("~/")';
+        </script>
+      
+        <script src="~/js/registration.js"></script>
+    }
+
+    @if (ViewData["Title"] as string == "Advance Reservation")
+    {
+        <script src="~/js/reservation.js"></script>
+        <script src="~/js/full-calendar.js"></script>
+    }
+
+    @if (ViewData["Title"] as string == "Order Details")
+    {
+        <script src="~/js/orderCalendar.js"></script>
+    }
+    
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

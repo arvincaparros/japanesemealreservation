@@ -1,0 +1,166 @@
+﻿
+@{
+    ViewData["ShowDashboardHeader"] = true;
+    ViewData["Title"] = "Advance Reservation";
+}
+
+
+@* <div class="container my-5">
+    <h2 class="text-center" style="max-width: 970px; margin: 10px auto; font-size: 18px;">To proceed with your reservation, please select a date from the calendar.</h2>
+    
+    <div id="calendar" style="max-width: 970px; margin: 40px auto;"></div>
+</div> *@
+
+
+@* <h2 class="text-center mb-4" style="margin-bottom: 50px; font-weight: 600;">Plan Ahead - Reserve your order</h2> *@
+
+<div class="container-fluid" style="min-height: 100vh; display: flex; justify-content: center; margin-bottom:150px; padding-top: 120px; gap: 20px;">
+    
+
+    <!-- Calendar Section (Left) -->
+    <div class="flex-grow-1 pe-3" style="max-width: 55%; margin-left: 40px;">
+        <h3 class="pb-4"><strong>Menu Schedule</strong></h3>
+        <div id="calendar" style="margin-bottom: 80px;"></div>
+    </div>
+
+    <!-- Reservation Form Section (Right) -->
+    <div class="flex-grow-1 d-flex justify-content-center align-items-start" style="overflow-y: auto; margin-top: 57px;">
+        
+        <form id="reservationForm" class="border p-4 rounded shadow mt-2" style="width: 100%; max-width: 700px; max-height: 90vh; overflow-y: auto;"
+              asp-controller="Reservation" asp-action="SaveAdvanceOrder">
+            @Html.AntiForgeryToken()
+        
+            <h4 class="mb-4 text-center">Reservation Form</h4>
+
+            <div class="row">
+                <!-- Part 1: Basic Info -->
+                <div class="col-md-6 pe-md-3 border-end">
+
+                    <div class="mb-3">
+                        <label class="form-label">Employee ID</label>
+                        <input type="text" class="form-control" id="employeeId" readonly
+                               value="@ViewBag.EmployeeData?.EmployeeId" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" readonly
+                               value="@ViewBag.EmployeeData?.FirstName" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" readonly
+                               value="@ViewBag.EmployeeData?.LastName" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Section</label>
+                        <input type="text" class="form-control" id="section" readonly
+                               value="@ViewBag.EmployeeData?.Section" />
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="form-label">Customer Type</label>
+                        <input type="text" name="CustomerType" id="costumerType" class="form-control" value="@ViewBag.EmployeeData?.EmployeeType" readonly />
+                    </div>
+
+                </div>
+
+                <!-- Part 2: Reservation Details -->
+                <div class="col-md-6 ps-md-3">
+
+                    <div class="mb-3">
+                        <label class="form-label">Selected Date (Required)</label>
+                        <input type="date" class="form-control" id="selectedDate" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Time (Required)</label>
+                        <input type="time" class="form-control" id="time" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Menu (Required)</label>
+                        <select class="form-select" id="menu" required>
+                            <option value="">-- Select Menu --</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Quantity (Required)</label>
+                        <input type="number" min="1" class="form-control" id="quantity" required />
+                    </div>
+
+                    <button type="submit" class="btn btn-dark w-100">Reserve</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@* <!-- Modal Form --> 
+<div class="" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true"> 
+    <div class="modal-dialog modal-dialog-centered"> 
+        <form id="ReservationForm" class="modal-content"> 
+            <div class="modal-header bg-dark text-light"> 
+                <h5 class="modal-title" id="reservationModalLabel">Make a Reservation</h5> 
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button> 
+            </div> 
+            <div class="modal-body"> 
+                <input type="hidden" id="selectedDate"> 
+
+                <div class="mb-2"> 
+                    <label class="form-label">Employee ID</label> 
+                    <input type="text" class="form-control" id="employeeId" required /> 
+                </div> 
+
+                <div class="mb-2"> 
+                    <label class="form-label">First Name</label> 
+                    <input type="text" class="form-control" id="firstName" readonly /> 
+                </div> 
+
+                <div class="mb-2"> 
+                    <label class="form-label">Last Name</label> 
+                    <input type="text" class="form-control" id="lastName" readonly /> 
+                </div> 
+
+                <div class="mb-2"> 
+                    <label class="form-label">Section</label> 
+                    <input type="text" class="form-control" id="section" readonly /> 
+                </div> 
+
+                <div class="mb-2">
+                    <label class="form-label">Menu</label> 
+                    <select class="form-select" id="menu" required> 
+                        <option value="">-- Select Menu --</option> 
+                    </select> 
+                </div> 
+
+                <div class="mb-2"> 
+                    <label class="form-label">Quantity</label> 
+                    <input type="number" min="1" class="form-control" id="quantity" required />
+                </div> 
+
+                <div class="mb-2"> 
+                    <label class="form-label">Selected Date</label> 
+                    <input type="text" class="form-control" id="displayDate" readonly /> 
+                    <input type="hidden" id="displayDate" /> 
+                </div> 
+             
+                <div class="mb-2"> 
+                    <label class="form-label">Time</label> 
+                    <input type="time" class="form-control" id="time" required /> 
+                </div> 
+            </div> 
+
+            <div class="modal-footer"> 
+                <button type="submit" class="btn btn-warning">Reserve</button> 
+            </div> 
+        </form> 
+    </div> 
+</div> *@
+
+
+
