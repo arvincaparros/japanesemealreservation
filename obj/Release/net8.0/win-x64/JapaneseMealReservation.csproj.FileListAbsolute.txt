@@ -198,3 +198,8 @@ C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\win-x64\s
 C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\win-x64\tr-TR\Hangfire.Core.resources.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\win-x64\zh-TW\Hangfire.Core.resources.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\win-x64\zh\Hangfire.Core.resources.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\JapaneseMealReservation.sourcelink.json
+C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\win-x64\BouncyCastle.Cryptography.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\win-x64\MailKit.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\win-x64\MimeKit.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\win-x64\TimeZoneConverter.dll

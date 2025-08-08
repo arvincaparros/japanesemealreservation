@@ -55,22 +55,43 @@
 
                                         var startDate = new DateTime(nowPH.Year, nowPH.Month, 1).AddMonths(-1); // First day of LAST month
                                         var endDate = new DateTime(nowPH.Year, nowPH.Month, DateTime.DaysInMonth(nowPH.Year, nowPH.Month)); // Last day of current month
-
                                     }
+
                                     @foreach (var item in Model.Where(o => o.Status == "Pending"))
                                     {
                                         var total = item.Quantity * item.Price;
                                         grandTotal += total;
 
-                                        var reservationDatePH = TimeZoneInfo.ConvertTimeFromUtc(item.ReservationDate, phTimeZone).Date;
-
-                                        // Disable if now ≥ 9AM and reservation date is today
-                                        bool disableButtons = nowPH.TimeOfDay >= new TimeSpan(9, 0, 0) && reservationDatePH <= todayPH;
+                                        var reservationDatePH = item.ReservationDate;
+                                        var reservationDateOnly = reservationDatePH.Date;
 
 
-                                        <tr> 
+                                        bool disableButtons = false;
+
+                                        if (reservationDateOnly < todayPH)
+                                        {
+                                            // Past reservation date → always disable
+                                            disableButtons = true;
+                                        }
+                                        else if (reservationDateOnly == todayPH && nowPH.TimeOfDay >= new TimeSpan(9, 0, 0))
+                                        {
+                                            // Today and already 9 AM or later → disable
+                                            disableButtons = true;
+                                        }
+
+                                        // Extra rule for breakfast cutoff: disable if after 3:30 PM on the day before
+                                        if (item.MenuType == "Breakfast")
+                                        {
+                                            var breakfastCutoff = reservationDateOnly.AddDays(-1).AddHours(15).AddMinutes(30);
+                                            if (nowPH >= breakfastCutoff)
+                                            {
+                                                disableButtons = true;
+                                            }
+                                        }
+
+                                        <tr>
                                             <td>@item.ReferenceNumber</td>
-                                            <td>@TimeZoneInfo.ConvertTimeFromUtc(item.ReservationDate, TimeZoneInfo.FindSystemTimeZoneById("Asia/Manila")).ToString("yyyy-MM-dd")</td>
+                                            <td>@reservationDateOnly.ToString("yyyy-MM-dd")</td>
                                             <td>@item.MenuType</td>
                                             <td>@item.Quantity</td>
                                             <td>₱@item.Price.ToString("N2")</td>
@@ -83,7 +104,7 @@
                                                         data-bs-target="#editQuantityModal"
                                                         data-qty="@item.Quantity"
                                                         data-ref="@item.ReferenceNumber"
-                                                        @(disableButtons ? "disabled style='pointer-events: none; opacity: 0.5;'" : "")>
+                                                @(disableButtons ? "disabled style='pointer-events: none; opacity: 0.5;'" : "")>
                                                     <i class="fa-solid fa-pen-to-square"></i> Edit
                                                 </button>
 
@@ -91,13 +112,16 @@
                                                         class="btn btn-sm btn-outline-danger cancel-order-btn"
                                                         data-ref="@item.ReferenceNumber"
                                                         title="Cancel Order"
-                                                        @(disableButtons ? "disabled style='pointer-events: none; opacity: 0.5;'" : "")>
+                                                @(disableButtons ? "disabled style='pointer-events: none; opacity: 0.5;'" : "")>
                                                     <i class="fa-solid fa-circle-xmark"></i> Cancel
                                                 </button>
                                             </td>
                                         </tr>
+
                                         count++;
                                     }
+
+
                                 </tbody>
                                 <tfoot>
                                     <tr class="fw-bold text-end">
@@ -167,7 +191,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 

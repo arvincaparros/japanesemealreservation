@@ -1,4 +1,5 @@
 ﻿using JapaneseMealReservation.AppData;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JapaneseMealReservation.Controllers
@@ -13,6 +14,7 @@ namespace JapaneseMealReservation.Controllers
             this.sqlServerDbContext = sqlServerDbContext;
         }
 
+        [AllowAnonymous]
         [HttpGet("GetEmployeeById")]
         public IActionResult GetEmployeeById(string id)
         {
@@ -29,7 +31,9 @@ namespace JapaneseMealReservation.Controllers
                     firstName = user.First_Name,
                     lastName = user.Last_Name,
                     section = user.Section,
-                    email = user.Email
+                    email = user.Email,
+                    position = user.Position,
+                    adid = user.ADID
                 });
             }
             catch (Exception ex)

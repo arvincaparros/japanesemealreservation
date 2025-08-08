@@ -510,7 +510,6 @@ a:focus {
   border-radius: 15px;
   background: linear-gradient(to bottom, #f1f2f3 25px, #222831 25px);
   height: 480px;
-
 }
 
 .food_section .box .img-box {
@@ -525,7 +524,7 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
   height: 215px;
-  border-radius: 0 0 0 45px;
+  border-radius: 15px 15px 0 45px;
   margin: -1px;
   padding: 25px;
 }

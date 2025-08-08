@@ -30,19 +30,10 @@
             imagePreview.style.display = 'none';
             imagePreview.src = '';
         }
+
+
     });
 
-    //To automatically select "Expat" or "Local" in the costumerType
-    const employeeIdInput = document.getElementById("employeeId");
-    const customerTypeSelect = document.getElementById("costumerType");
-
-    if (employeeIdInput && customerTypeSelect) {
-        const empId = employeeIdInput.value;
-
-        if (empId.includes("BIP-JP")) {
-            customerTypeSelect.value = "Expat";
-        } else {
-            customerTypeSelect.value = "Local";
-        }
-    }
+    
 });
+

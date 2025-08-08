@@ -53,13 +53,14 @@ namespace JapaneseMealReservation.Controllers
 
         //    return Ok(new { success = true, orderNumber = order.OrderNumber });
         //}
+
         public async Task<string> GenerateTokenLinkAsync(string employeeId)
         {
             var token = new AccessToken
             {
                 Token = Guid.NewGuid(),
                 EmployeeId = employeeId,
-                ExpiresAt = DateTime.UtcNow.AddMinutes(30)
+                ExpiresAt = DateTime.UtcNow.AddHours(24)
             };
 
             dbContext.AccessTokens.Add(token);
@@ -430,8 +431,47 @@ namespace JapaneseMealReservation.Controllers
             return RedirectToAction("OrderSummary");
         }
 
+        //[HttpPost]
+        //public IActionResult CancelOrder(string ReferenceNumber)
+        //{
+        //    var source = dbContext.CombineOrders
+        //        .Where(x => x.ReferenceNumber == ReferenceNumber)
+        //        .Select(x => x.Source)
+        //        .FirstOrDefault();
+
+        //    if (string.IsNullOrEmpty(source))
+        //    {
+        //        TempData["UpdateStatus"] = "error";
+        //        TempData["UpdateMessage"] = "Order not found.";
+        //        return RedirectToAction("OrderSummary");
+        //    }
+
+        //    if (source == "Order")
+        //    {
+        //        var order = dbContext.Orders.FirstOrDefault(x => x.ReferenceNumber == ReferenceNumber);
+        //        if (order != null)
+        //        {
+        //            order.Status = "Cancelled"; // ✅ Update status
+        //        }
+        //    }
+        //    else if (source == "AdvanceOrder")
+        //    {
+        //        var advOrder = dbContext.AdvanceOrders.FirstOrDefault(x => x.ReferenceNumber == ReferenceNumber);
+        //        if (advOrder != null)
+        //        {
+        //            advOrder.Status = "Cancelled"; // ✅ Update status
+        //        }
+        //    }
+
+        //    dbContext.SaveChanges();
+
+        //    TempData["UpdateStatus"] = "success";
+        //    TempData["UpdateMessage"] = "Order cancelled successfully.";
+        //    return RedirectToAction("OrderSummary");
+        //}
+
         [HttpPost]
-        public IActionResult CancelOrder(string ReferenceNumber)
+        public async Task<IActionResult> CancelOrder(string ReferenceNumber)
         {
             var source = dbContext.CombineOrders
                 .Where(x => x.ReferenceNumber == ReferenceNumber)
@@ -445,29 +485,115 @@ namespace JapaneseMealReservation.Controllers
                 return RedirectToAction("OrderSummary");
             }
 
+            string email = null;
+            string name = null;
+            DateTime? date = null;
+            TimeSpan? time = null;
+
             if (source == "Order")
             {
                 var order = dbContext.Orders.FirstOrDefault(x => x.ReferenceNumber == ReferenceNumber);
                 if (order != null)
                 {
-                    order.Status = "Cancelled"; // ✅ Update status
+                    order.Status = "Cancelled";
+
+                    var user = dbContext.Users.FirstOrDefault(u => u.EmployeeId == order.EmployeeId);
+                    if (user != null)
+                    {
+                        email = user.Email;
+                        name = order.FirstName;
+                        date = order.ReservationDate;
+                        time = order.MealTime;
+                    }
                 }
             }
             else if (source == "AdvanceOrder")
             {
                 var advOrder = dbContext.AdvanceOrders.FirstOrDefault(x => x.ReferenceNumber == ReferenceNumber);
+
                 if (advOrder != null)
                 {
-                    advOrder.Status = "Cancelled"; // ✅ Update status
+                    advOrder.Status = "Cancelled";
+
+                    var user = dbContext.Users.FirstOrDefault(u => u.EmployeeId == advOrder.EmployeeId);
+                    if (user != null)
+                    {
+                        email = user.Email;
+                        name = advOrder.FirstName;
+                        date = advOrder.ReservationDate;
+                        if (!string.IsNullOrWhiteSpace(advOrder.MealTime))
+                        {
+                            if (TimeSpan.TryParse(advOrder.MealTime, out var parsedTime))
+                            {
+                                time = parsedTime;
+                            }
+                        }
+                    }
                 }
             }
 
-            dbContext.SaveChanges();
+            await dbContext.SaveChangesAsync();
+
+            // Send cancellation email
+            if (!string.IsNullOrWhiteSpace(email))
+            {
+                string subject = $"❌ Meal Order Cancelled - {ReferenceNumber}";
+                string body = $@"
+                <table width='100%' cellpadding='0' cellspacing='0' border='0' style='font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px;'>
+                    <tr>
+                        <td align='center'>
+                            <table width='600' cellpadding='0' cellspacing='0' border='0' style='background-color: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);'>
+                                <tr>
+                                    <td style='background-color: #c0392b; padding: 20px; color: #ffffff; text-align: center;'>
+                                        <h2 style='margin: 0;'>Order Cancelled</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style='padding: 30px;'>
+                                        <h3 style='color: #333;'>Hi {name},</h3>
+                                        <p style='font-size: 16px; color: #555;'>Your meal reservation has been <strong>cancelled</strong>. Please see the details below:</p>
+                                        <table width='100%' cellpadding='0' cellspacing='0' style='margin-top: 20px;'>
+                                            <tr>
+                                                <td><strong>Reference #:</strong></td>
+                                                <td style='padding: 8px 0;'>{ReferenceNumber}</td>
+                                            </tr>
+                                            <tr style='background-color: #f5f5f5;'>
+                                                <td style='padding: 8px 0;'><strong>Reservation Date:</strong></td>
+                                                <td style='padding: 8px 0;'>{(date.HasValue ? date.Value.ToString("yyyy-MM-dd") : "N/A")}</td>
+                                            </tr>
+                                            <tr>
+                                                <td style='padding: 8px 0;'><strong>Meal Time:</strong></td>
+                                                <td style='padding: 8px 0;'>{(time.HasValue ? time.Value.ToString() : "N/A")}</td>
+                                            </tr>
+                                        </table>
+                                        <p style='margin-top: 30px; font-size: 16px; color: #444;'>If this was a mistake or you wish to reorder, please visit the japanese meal reservation again.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style='background-color: #ecf0f1; padding: 15px; text-align: center; font-size: 12px; color: #777;'>
+                                        © 2025 - BIPH - Japanese Meal Reservation
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>";
+
+                try
+                {
+                    await mailService.SendEmailAsync(email, subject, body);
+                }
+                catch (Exception ex)
+                {
+                    logger.LogError(ex, "Failed to send cancellation email for Reference #: {ReferenceNumber}", ReferenceNumber);
+                }
+            }
 
             TempData["UpdateStatus"] = "success";
             TempData["UpdateMessage"] = "Order cancelled successfully.";
             return RedirectToAction("OrderSummary");
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]

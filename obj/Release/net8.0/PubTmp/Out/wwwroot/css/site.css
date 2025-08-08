@@ -22,13 +22,13 @@ body {
 }
 
 .admin {
-/*    position: fixed;
+    /*    position: fixed;
     top: 10px;
     right: 10px;*/
     background-color: none;
     border: 1px solid #fff;
     padding: 3px 8px;
-  /*  z-index: 100;*/
+    /*  z-index: 100;*/
     color: #fff;
     cursor: pointer;
 }
@@ -76,9 +76,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 90vh;
+    min-height: 100vh;
     position: absolute;
     width: 100vw;
+    padding-top: 75px;
 }
 
 @media (max-width: 1200px) {
@@ -103,6 +104,11 @@ body {
     padding-right: 20px;
     background-color: black;
     z-index: 10;
+    height: 60px;
+}
+
+.footer-fix span {
+    margin-left: 15px;
 }
 
 .dashboardContainer {
@@ -148,13 +154,13 @@ body {
     max-width: 400px;
 }
 
-    .login-card h4 {
-        font-weight: 600;
-        margin-bottom: 25px;
-        text-align: center;
-        font-size: 45px
+.login-card h4 {
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 45px
 
-    }
+}
 
 .form-control {
     height: 45px;
@@ -169,9 +175,9 @@ body {
     letter-spacing: 0.5px;
 }
 
-    .btn-login:hover {
-        background-color: #0b5ed7;
-    }
+.btn-login:hover {
+    background-color: #0b5ed7;
+}
 
 .form-footer {
     margin-top: 20px;
@@ -179,7 +185,84 @@ body {
     font-size: 14px;
 }
 
-    .form-footer a {
-        text-decoration: none;
-        color: #0d6efd;
+.form-footer a {
+    text-decoration: none;
+    color: #0d6efd;
+}
+
+.link-warning:hover {
+    color: #E7B34B !important;
+}
+manual-btn {
+    font-size: 10px;
+}
+.manual-btn:hover {
+    background-color: #ffc107; /* Bootstrap warning */
+    color: #000 !important; /* Black text on hover */
+}
+
+.manual-btn:hover i {
+    color: #000 !important;
+}
+
+.google-translate-box {
+    display: inline-block;
+    padding: 2px 5px;
+    background-color: #454545;
+    border: 1px solid #ced4da;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Hide Google branding */
+.goog-logo-link,
+.goog-te-gadget span,
+.goog-te-banner-frame {
+    display: none !important;
+    height: 0 !important;
+}
+
+.goog-te-combo {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background-color: white;
+    color: #212529;
+    font-size: 14px;
+}
+
+
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .header-menu {
+        font-size: 12px;
+        min-width: 50px;
+        text-align: center;
     }
+
+    .jrms-logo {
+        width: 140px;
+    }
+
+    #google_translate_element {
+        font-size: 10px;
+    }
+
+    .google-translate-box span {
+        font-size: 12px;
+    }
+
+    .logged-in-user {
+        font-size: 14px;
+    }
+
+    .book-now, .admin-dashboard {
+        font-size: 12px;
+        min-width: 100px;
+    }
+
+    .logout {
+        font-size: 12px;
+    }
+}

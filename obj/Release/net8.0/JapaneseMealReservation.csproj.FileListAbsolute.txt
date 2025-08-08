@@ -211,3 +211,8 @@ C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\sv\Hangfi
 C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\tr-TR\Hangfire.Core.resources.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\zh-TW\Hangfire.Core.resources.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\zh\Hangfire.Core.resources.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\JapaneseMealReservation.sourcelink.json
+C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\MailKit.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\MimeKit.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Release\net8.0\TimeZoneConverter.dll

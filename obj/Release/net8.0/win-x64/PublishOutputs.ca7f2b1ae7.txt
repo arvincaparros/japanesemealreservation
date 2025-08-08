@@ -6,6 +6,7 @@ C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\P
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\JapaneseMealReservation.pdb
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Azure.Core.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Azure.Identity.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\BouncyCastle.Cryptography.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\ClosedXML.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\ClosedXML.Parser.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Dapper.dll
@@ -21,6 +22,7 @@ C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\P
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Hangfire.NetCore.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Hangfire.PostgreSql.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Hangfire.SqlServer.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\MailKit.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Microsoft.Data.SqlClient.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
@@ -49,6 +51,7 @@ C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\P
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Microsoft.IO.RecyclableMemoryStream.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Microsoft.SqlServer.Server.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\MimeKit.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Newtonsoft.Json.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Npgsql.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\Npgsql.EntityFrameworkCore.PostgreSQL.dll
@@ -71,6 +74,7 @@ C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\P
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\System.Text.Encodings.Web.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\System.Text.Json.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\System.Windows.Extensions.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\TimeZoneConverter.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\ca\Hangfire.Core.resources.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\de\Hangfire.Core.resources.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\win-x64\PubTmp\Out\es\Hangfire.Core.resources.dll

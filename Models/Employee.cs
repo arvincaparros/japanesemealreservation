@@ -12,5 +12,7 @@ namespace JapaneseMealReservation.Models
         public string? Last_Name { get; set; }
         public string? Section { get; set; }
         public string? Email { get; set; }
+        public string Position { get; set; }
+        public string ADID { get; set; }
     }
 }

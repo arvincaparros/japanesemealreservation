@@ -329,6 +329,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\run-iportal\\launch-I-portal-app.bat",
+      "PackagePath": "staticwebassets\\run-iportal\\launch-I-portal-app.bat"
+    },
+    {
       "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\BUTA NO SHOGAYAKI_1_27b36557-3e39-461d-b32e-68def1d39d83.png",
       "PackagePath": "staticwebassets\\uploads\\BUTA NO SHOGAYAKI_1_27b36557-3e39-461d-b32e-68def1d39d83.png"
     },
@@ -357,6 +361,10 @@
       "PackagePath": "staticwebassets\\uploads\\BUTA NO SHOGAYAKI_2_c83ac280-1bd1-4407-9702-86ff69eaa75c.png"
     },
     {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\BUTA NO SHOGAYAKI_34_4d078890-e0ed-48bf-99a4-b055ab199125.jpg",
+      "PackagePath": "staticwebassets\\uploads\\BUTA NO SHOGAYAKI_34_4d078890-e0ed-48bf-99a4-b055ab199125.jpg"
+    },
+    {
       "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\BUTA NO SHOGAYAKI_3_dfa2a03d-20b1-449f-a0a5-9b215d83a327.png",
       "PackagePath": "staticwebassets\\uploads\\BUTA NO SHOGAYAKI_3_dfa2a03d-20b1-449f-a0a5-9b215d83a327.png"
     },
@@ -369,8 +377,80 @@
       "PackagePath": "staticwebassets\\uploads\\BUTA NO SHOGAYAKI_8_08dc8c0c-6c60-41eb-810d-4a1b4fd0e7e5.png"
     },
     {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\CHEESY EBI ROLL_49_719c734d-6eb9-4553-8b8f-908505a03cb9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\CHEESY EBI ROLL_49_719c734d-6eb9-4553-8b8f-908505a03cb9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\EBI FURAI CURRY_38_ad6819d6-4f85-47ab-a960-76f68481912b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\EBI FURAI CURRY_38_ad6819d6-4f85-47ab-a960-76f68481912b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\FUTO MAKI ROLL_37_c6c58bf8-f576-4c78-8f56-f66b017809c4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\FUTO MAKI ROLL_37_c6c58bf8-f576-4c78-8f56-f66b017809c4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\IKA SHOGAYAKI_33_899f51fe-b71d-4dfb-a195-572f82fca4e4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\IKA SHOGAYAKI_33_899f51fe-b71d-4dfb-a195-572f82fca4e4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\KANI CREAM KOROKKE (CRABMEAT)_45_d5d664a3-f9f2-4217-852e-22a52e6ce3c7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\KANI CREAM KOROKKE (CRABMEAT)_45_d5d664a3-f9f2-4217-852e-22a52e6ce3c7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\KATSU CURRY_51_d9109a57-ee9c-4908-b545-25ec048e211d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\KATSU CURRY_51_d9109a57-ee9c-4908-b545-25ec048e211d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\OROSHI PONZU CHICKEN_48_70880dd7-7d7a-452c-9265-a08c6da7bcb5.jpg",
+      "PackagePath": "staticwebassets\\uploads\\OROSHI PONZU CHICKEN_48_70880dd7-7d7a-452c-9265-a08c6da7bcb5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\PORK YAKINIKU_46_ab0d8698-bace-4fe0-81a9-3122897a60df.jpg",
+      "PackagePath": "staticwebassets\\uploads\\PORK YAKINIKU_46_ab0d8698-bace-4fe0-81a9-3122897a60df.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\ROLLED TORI KATSU_32_f19d5909-32aa-4a48-a991-44a632549ed6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ROLLED TORI KATSU_32_f19d5909-32aa-4a48-a991-44a632549ed6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\SANSHOKU SOBORO_30_3be4d865-7d20-47b8-81f3-cd8fc0b605db.jpg",
+      "PackagePath": "staticwebassets\\uploads\\SANSHOKU SOBORO_30_3be4d865-7d20-47b8-81f3-cd8fc0b605db.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\SHOYU RAMEN_52_b132b311-669a-4293-bc9e-49b75c3be39c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\SHOYU RAMEN_52_b132b311-669a-4293-bc9e-49b75c3be39c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\SPICY NEGI RAMEN_39_b4116df5-0f97-4927-9fa0-18bf6e8163b5.jpg",
+      "PackagePath": "staticwebassets\\uploads\\SPICY NEGI RAMEN_39_b4116df5-0f97-4927-9fa0-18bf6e8163b5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\SUBUTA_47_e4e6baf0-2dba-46cc-8785-be83bfbf162e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\SUBUTA_47_e4e6baf0-2dba-46cc-8785-be83bfbf162e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\TONPEIYAKI_31_1a713dd7-41a9-40f6-8555-41484df26bac.jpg",
+      "PackagePath": "staticwebassets\\uploads\\TONPEIYAKI_31_1a713dd7-41a9-40f6-8555-41484df26bac.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\TUNA MAKI ROLL_20_65304b79-b4a6-4f80-b2c3-f6252f458e1c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\TUNA MAKI ROLL_20_65304b79-b4a6-4f80-b2c3-f6252f458e1c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\TUNA MAKI ROLL_35_cd35236d-1e78-4734-a8a3-ea8d47e9a320.jpg",
+      "PackagePath": "staticwebassets\\uploads\\TUNA MAKI ROLL_35_cd35236d-1e78-4734-a8a3-ea8d47e9a320.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\YAKI SOBA_36_8d970d88-027c-4ed9-8392-ee49f22f562b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\YAKI SOBA_36_8d970d88-027c-4ed9-8392-ee49f22f562b.jpg"
+    },
+    {
       "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\bangsilog_12_288cadda-fd26-4feb-bf01-0b5072998303.jpg",
       "PackagePath": "staticwebassets\\uploads\\bangsilog_12_288cadda-fd26-4feb-bf01-0b5072998303.jpg"
+    },
+    {
+      "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\bento_4_61b0d113-0556-4260-b8a7-44b02aff8e0b.png",
+      "PackagePath": "staticwebassets\\uploads\\bento_4_61b0d113-0556-4260-b8a7-44b02aff8e0b.png"
     },
     {
       "Id": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\uploads\\bento_5_8ceb75c7-2d63-48a9-b6bb-099628486965.jpg",

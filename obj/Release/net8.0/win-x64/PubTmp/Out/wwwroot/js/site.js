@@ -13,31 +13,33 @@ document.addEventListener('DOMContentLoaded', function () {
             alertInstance.close();
         }, 2000); // 2000ms = 2 seconds
     }
+
+    //Update Firstname, lastname, section in Resevation/Order Form
+    document.getElementById("employeeId").addEventListener("change", function () {
+        const empId = this.value;
+
+        if (empId.trim() === "") return;
+
+        const baseUrl = '@Url.Content("~/")'.replace(/\/+$/, '');
+        fetch(`${baseUrl}/Home/GetEmployeeById?id=${encodeURIComponent(empId)}`)
+            .then(response => {
+                if (!response.ok) throw new Error("Employee not found.");
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById("firstName").value = data.firstName;
+                document.getElementById("lastName").value = data.lastName;
+                document.getElementById("section").value = data.section;
+            })
+            .catch(error => {
+                alert("Employee not found.");
+                document.getElementById("firstName").value = "";
+                document.getElementById("lastName").value = "";
+                document.getElementById("section").value = "";
+            });
+    });
 });
 
-//Update Firstname, lastname, section in Resevation/Order Form
-document.getElementById("employeeId").addEventListener("change", function () {
-    const empId = this.value;
-
-    if (empId.trim() === "") return;
-
-    fetch(`/Home/GetEmployeeById?id=${encodeURIComponent(empId)}`)
-        .then(response => {
-            if (!response.ok) throw new Error("Employee not found.");
-            return response.json();
-        })
-        .then(data => {
-            document.getElementById("firstName").value = data.firstName;
-            document.getElementById("lastName").value = data.lastName;
-            document.getElementById("section").value = data.section;
-        })
-        .catch(error => { 
-            alert("Employee not found.");
-            document.getElementById("firstName").value = "";
-            document.getElementById("lastName").value = "";
-            document.getElementById("section").value = "";
-        });
-});
 
 //Update Ordername and image
 $(document).ready(function () {

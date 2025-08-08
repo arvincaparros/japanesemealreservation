@@ -21,7 +21,7 @@ $(window).on('load', function () {
         })
     });
 
-    var $grid = $(".grid").isotope({
+    var $grid = $(".filter-grid").isotope({
         itemSelector: ".all",
         percentPosition: false,
         masonry: {

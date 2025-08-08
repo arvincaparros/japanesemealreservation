@@ -160,7 +160,8 @@
                             if (item.AvailabilityDate.HasValue)
                             {
                                 var availabilityDate = item.AvailabilityDate.Value.Date;
-                                var cutoffDateTime = availabilityDate.AddDays(-1).AddHours(16); // 4:00 PM previous day
+                                var cutoffDateTime = availabilityDate.AddDays(-1).AddHours(15).AddMinutes(30); // 3:30 PM previous day
+
 
                                 isDisabled = nowPH >= cutoffDateTime;
                             }

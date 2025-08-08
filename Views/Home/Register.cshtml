@@ -51,6 +51,9 @@
                     <span class="text-danger" id="confirmPasswordError"></span>
                 </div>
 
+                <input asp-for="Position" id="position" type="hidden" />
+                <input asp-for="ADID" id="adid" type="hidden" />
+
                 <button type="submit" class="btn btn-dark w-100">Register</button>
             </form>
 
@@ -73,3 +76,21 @@
     </div>
 </div>
 
+@section Scripts {
+
+    @if (TempData["ShowRegisterAlert"] != null)
+    {
+        <script>
+            Swal.fire({
+                icon: 'info',
+                title: 'Account not found',
+                text: 'You don\'t have an account yet. Please create one.',
+                confirmButtonText: 'Register Now'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '@Url.Action("Register", "Home")';
+                }
+            });
+        </script>
+    }
+}

@@ -3,88 +3,89 @@
   "WorkspaceRootPath": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\order\\noodlesorderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\order\\noodlesorderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\reservation\\expatadvancereservation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\reservation\\expatadvancereservation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\order\\makiorderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\order\\makiorderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\order\\breakfastorderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\order\\breakfastorderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\caparrar\\Documents\\MHMS\\MHMS\\LoginForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\admin\\expatmonthlydeduction.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\admin\\expatmonthlydeduction.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\caparrar\\Documents\\MHMS\\MHMS\\UserSetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\order\\curryorderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\order\\curryorderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\caparrar\\Documents\\MHMS\\MHMS\\MHMS.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\order\\bentoorderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\order\\bentoorderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\reservation\\mealreservation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\reservation\\mealreservation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\home\\iportalconfirmationform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\home\\iportalconfirmationform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\models\\cassystemapproverlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:models\\cassystemapproverlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\wwwroot\\js\\registration.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:wwwroot\\js\\registration.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\order\\ordersummary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\order\\ordersummary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\appdata\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:appdata\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\viewmodels\\expatmonthlydeduction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:viewmodels\\expatmonthlydeduction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\services\\mailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:services\\mailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\views\\admin\\expatmonthlydeduction.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:views\\admin\\expatmonthlydeduction.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\models\\orderupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:models\\orderupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|c:\\users\\caparrar\\documents\\japanesemealreservation\\models\\advanceorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{599F2467-11D5-42CA-8400-1585C8796F57}|JapaneseMealReservation.csproj|solutionrelative:models\\advanceorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,7 +95,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 326,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -105,169 +106,163 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 16,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAlwFwAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAALMAAAAAAAAAAAAlwMAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-06-27T04:13:57.861Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "registration.js",
               "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\js\\registration.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\registration.js",
               "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\js\\registration.js",
               "RelativeToolTip": "wwwroot\\js\\registration.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAqwCsAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-06-05T00:03:11.096Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAAAH4AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-11T01:35:52.862Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAADwv0YAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T03:55:04.737Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-09T23:51:56.663Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BentoOrderList.cshtml",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Order\\BentoOrderList.cshtml",
-              "RelativeDocumentMoniker": "Views\\Order\\BentoOrderList.cshtml",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Order\\BentoOrderList.cshtml",
-              "RelativeToolTip": "Views\\Order\\BentoOrderList.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAB1AAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "IportalConfirmationForm.cshtml",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Home\\IportalConfirmationForm.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\IportalConfirmationForm.cshtml",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Home\\IportalConfirmationForm.cshtml",
+              "RelativeToolTip": "Views\\Home\\IportalConfirmationForm.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-26T23:15:32.35Z",
+              "WhenOpened": "2025-07-31T01:56:11.485Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\MHMS\\MHMS\\LoginForm.cs",
+              "RelativeDocumentMoniker": "..\\MHMS\\MHMS\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\MHMS\\MHMS\\LoginForm.cs",
+              "RelativeToolTip": "..\\MHMS\\MHMS\\LoginForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T00:04:57.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ExpatMonthlyDeduction.cshtml",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Admin\\ExpatMonthlyDeduction.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\ExpatMonthlyDeduction.cshtml",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Admin\\ExpatMonthlyDeduction.cshtml",
-              "RelativeToolTip": "Views\\Admin\\ExpatMonthlyDeduction.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAEoAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-26T08:08:05.817Z",
+              "Title": "UserSetting.cs",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\MHMS\\MHMS\\UserSetting.cs",
+              "RelativeDocumentMoniker": "..\\MHMS\\MHMS\\UserSetting.cs",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\MHMS\\MHMS\\UserSetting.cs",
+              "RelativeToolTip": "..\\MHMS\\MHMS\\UserSetting.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T00:04:56.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MHMS.csproj",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\MHMS\\MHMS\\MHMS.csproj",
+              "RelativeDocumentMoniker": "..\\MHMS\\MHMS\\MHMS.csproj",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\MHMS\\MHMS\\MHMS.csproj",
+              "RelativeToolTip": "..\\MHMS\\MHMS\\MHMS.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-05T00:04:56.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReservationController.cs",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Controllers\\ReservationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReservationController.cs",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Controllers\\ReservationController.cs",
+              "RelativeToolTip": "Controllers\\ReservationController.cs",
+              "ViewState": "AgIAAPsAAAAAAAAAAAAqwBMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T02:06:16.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAApwFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T03:15:17.992Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NoodlesOrderList.cshtml",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Order\\NoodlesOrderList.cshtml",
-              "RelativeDocumentMoniker": "Views\\Order\\NoodlesOrderList.cshtml",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Order\\NoodlesOrderList.cshtml",
-              "RelativeToolTip": "Views\\Order\\NoodlesOrderList.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAB1AAAAAAAAAA==",
+              "Title": "ExpatAdvanceReservation.cshtml",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Reservation\\ExpatAdvanceReservation.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reservation\\ExpatAdvanceReservation.cshtml",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Reservation\\ExpatAdvanceReservation.cshtml",
+              "RelativeToolTip": "Views\\Reservation\\ExpatAdvanceReservation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-03T08:20:15.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BreakfastOrderList.cshtml",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Order\\BreakfastOrderList.cshtml",
-              "RelativeDocumentMoniker": "Views\\Order\\BreakfastOrderList.cshtml",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Order\\BreakfastOrderList.cshtml",
-              "RelativeToolTip": "Views\\Order\\BreakfastOrderList.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-26T23:15:24.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MakiOrderList.cshtml",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Order\\MakiOrderList.cshtml",
-              "RelativeDocumentMoniker": "Views\\Order\\MakiOrderList.cshtml",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Order\\MakiOrderList.cshtml",
-              "RelativeToolTip": "Views\\Order\\MakiOrderList.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAB1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-03T08:20:10.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CurryOrderList.cshtml",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Order\\CurryOrderList.cshtml",
-              "RelativeDocumentMoniker": "Views\\Order\\CurryOrderList.cshtml",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Order\\CurryOrderList.cshtml",
-              "RelativeToolTip": "Views\\Order\\CurryOrderList.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAB1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-03T08:20:04.666Z",
+              "WhenOpened": "2025-07-24T06:45:39.139Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Dashboard.cshtml",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Admin\\Dashboard.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\Dashboard.cshtml",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Admin\\Dashboard.cshtml",
-              "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAAALoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-25T23:17:36.502Z",
-              "EditorCaption": ""
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T06:29:04.914Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Login.cshtml",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "Views\\Home\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T10:10:50.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -275,87 +270,107 @@
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-29T23:05:13.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-29T23:05:13.584Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MealReservation.cshtml",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Reservation\\MealReservation.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reservation\\MealReservation.cshtml",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Reservation\\MealReservation.cshtml",
-              "RelativeToolTip": "Views\\Reservation\\MealReservation.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-30T05:33:32.841Z",
-              "EditorCaption": ""
+              "DocumentIndex": 11,
+              "Title": "CasSystemApproverList.cs",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Models\\CasSystemApproverList.cs",
+              "RelativeDocumentMoniker": "Models\\CasSystemApproverList.cs",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Models\\CasSystemApproverList.cs",
+              "RelativeToolTip": "Models\\CasSystemApproverList.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T09:26:13.275Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "Controllers\\OrderController.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAgwFoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T06:35:42.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Home\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Login.cshtml",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Home\\Login.cshtml",
-              "RelativeToolTip": "Views\\Home\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Title": "OrderSummary.cshtml",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Order\\OrderSummary.cshtml",
+              "RelativeDocumentMoniker": "Views\\Order\\OrderSummary.cshtml",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Order\\OrderSummary.cshtml",
+              "RelativeToolTip": "Views\\Order\\OrderSummary.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-02T10:10:50.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T00:01:19.412Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\AppData\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "AppData\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\AppData\\AppDbContext.cs",
-              "RelativeToolTip": "AppData\\AppDbContext.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAA8AAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwB8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T09:55:17.947Z"
+              "WhenOpened": "2025-07-10T23:55:29.324Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAkwFAAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Controllers\\MenuController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MenuController.cs",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Controllers\\MenuController.cs",
+              "RelativeToolTip": "Controllers\\MenuController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T06:28:37.156Z"
+              "WhenOpened": "2025-07-11T07:03:02.78Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "ExpatMonthlyDeduction.cs",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\ViewModels\\ExpatMonthlyDeduction.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ExpatMonthlyDeduction.cs",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\ViewModels\\ExpatMonthlyDeduction.cs",
-              "RelativeToolTip": "ViewModels\\ExpatMonthlyDeduction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-11T01:03:07.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MailService.cs",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Services\\MailService.cs",
+              "RelativeDocumentMoniker": "Services\\MailService.cs",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Services\\MailService.cs",
+              "RelativeToolTip": "Services\\MailService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAADwvzkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T10:28:36.67Z"
+              "WhenOpened": "2025-07-11T07:33:00.082Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAKIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-25T23:17:36.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ExpatMonthlyDeduction.cshtml",
+              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Admin\\ExpatMonthlyDeduction.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\ExpatMonthlyDeduction.cshtml",
+              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Views\\Admin\\ExpatMonthlyDeduction.cshtml",
+              "RelativeToolTip": "Views\\Admin\\ExpatMonthlyDeduction.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-26T08:08:05.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "OrderUpdateRequest.cs",
               "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Models\\OrderUpdateRequest.cs",
               "RelativeDocumentMoniker": "Models\\OrderUpdateRequest.cs",
@@ -363,20 +378,7 @@
               "RelativeToolTip": "Models\\OrderUpdateRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T06:41:12.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "AdvanceOrder.cs",
-              "DocumentMoniker": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Models\\AdvanceOrder.cs",
-              "RelativeDocumentMoniker": "Models\\AdvanceOrder.cs",
-              "ToolTip": "C:\\Users\\caparrar\\Documents\\JapaneseMealReservation\\Models\\AdvanceOrder.cs",
-              "RelativeToolTip": "Models\\AdvanceOrder.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAwwBsAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T03:22:52.465Z"
+              "WhenOpened": "2025-06-25T06:41:12.671Z"
             }
           ]
         },
@@ -395,10 +397,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

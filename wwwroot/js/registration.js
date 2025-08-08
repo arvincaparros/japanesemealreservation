@@ -1,8 +1,15 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
     const empInput = document.querySelector('input[name="EmployeeId"]');
+    const firstNameInput = document.querySelector('input[name="FirstName"]');
+    const lastNameInput = document.querySelector('input[name="LastName"]');
+    const emailInput = document.querySelector('input[name="Email"]');
+    const sectionInput = document.querySelector('input[name="Section"]');
+
+    const positionInput = document.querySelector('input[name="Position"]');
+    const adidInput = document.querySelector('input[name="ADID"]');
 
     if (!empInput) {
-        console.error("EmployeeId input not found in form.");
+        console.error("EmployeeId input not found.");
         return;
     }
 
@@ -12,32 +19,39 @@
 
         if (!empId) return;
 
-        const baseUrl = window.appBaseUrl || '/';
-        const fetchUrl = `${window.appBaseUrl}Employee/GetEmployeeById?id=${encodeURIComponent(empId)}`;
-
+        const fetchUrl = `${window.appBaseUrl || '/'}Employee/GetEmployeeById?id=${encodeURIComponent(empId)}`;
 
         fetch(fetchUrl)
-            .then(response => {
-                if (!response.ok) throw new Error("Employee not found.");
+            .then(async response => {
+                const contentType = response.headers.get("content-type") || "";
+                if (!response.ok || !contentType.includes("application/json")) {
+                    const errorHtml = await response.text();
+                    console.error("Expected JSON, got:", errorHtml);
+                    throw new Error("Server returned invalid response.");
+                }
                 return response.json();
             })
             .then(data => {
-                document.querySelector('input[name="FirstName"]').value = data.firstName || "";
-                document.querySelector('input[name="LastName"]').value = data.lastName || "";
-                document.querySelector('input[name="Email"]').value = data.email || "";
-                document.querySelector('input[name="Section"]').value = data.section || "";
+                if (!data || data.success === false) {
+                    throw new Error(data.message || "Employee not found.");
+                }
+
+                firstNameInput.value = data.firstName || "";
+                lastNameInput.value = data.lastName || "";
+                emailInput.value = data.email || "";
+                sectionInput.value = data.section || "";
+                positionInput.value = data.position || "";
+                adidInput.value = data.adid || "";
             })
             .catch(error => {
-                alert("Error. Reason: " + (error.message || "Unknown error"));
-                document.querySelector('input[name="FirstName"]').value = "";
-                document.querySelector('input[name="LastName"]').value = "";
-                document.querySelector('input[name="Email"]').value = "";
-                document.querySelector('input[name="Section"]').value = "";
+                alert("Error: " + (error.message || "Unable to retrieve employee details."));
+                firstNameInput.value = "";
+                lastNameInput.value = "";
+                emailInput.value = "";
+                sectionInput.value = "";
                 console.error("Fetch error:", error);
             });
-
     });
-
 
     //Password Confirmation/Validation
     const form = document.querySelector("form");

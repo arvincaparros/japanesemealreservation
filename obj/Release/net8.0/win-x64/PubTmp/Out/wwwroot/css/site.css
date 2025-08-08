@@ -22,13 +22,13 @@ body {
 }
 
 .admin {
-/*    position: fixed;
+    /*    position: fixed;
     top: 10px;
     right: 10px;*/
     background-color: none;
     border: 1px solid #fff;
     padding: 3px 8px;
-  /*  z-index: 100;*/
+    /*  z-index: 100;*/
     color: #fff;
     cursor: pointer;
 }
@@ -76,9 +76,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 90vh;
+    min-height: 100vh;
     position: absolute;
     width: 100vw;
+    padding-top: 75px;
 }
 
 @media (max-width: 1200px) {
@@ -103,6 +104,11 @@ body {
     padding-right: 20px;
     background-color: black;
     z-index: 10;
+    height: 60px;
+}
+
+.footer-fix span {
+    margin-left: 15px;
 }
 
 .dashboardContainer {
@@ -187,6 +193,17 @@ body {
 .link-warning:hover {
     color: #E7B34B !important;
 }
+manual-btn {
+    font-size: 10px;
+}
+.manual-btn:hover {
+    background-color: #ffc107; /* Bootstrap warning */
+    color: #000 !important; /* Black text on hover */
+}
+
+.manual-btn:hover i {
+    color: #000 !important;
+}
 
 .google-translate-box {
     display: inline-block;
@@ -214,6 +231,7 @@ body {
     color: #212529;
     font-size: 14px;
 }
+
 
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {

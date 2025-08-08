@@ -170,7 +170,8 @@
                                     header: `<h2>${menuType}</h2><p>Date: ${today}</p><hr />`,
                                     afterPrint: function () {
                                         // ✅ Update status after both prints
-                                        fetch('/Order/CompleteTodayBentoOrders', {
+                                        const baseUrl = window.appBaseUrl || '/';
+                                        fetch(`${baseUrl}Order/CompleteTodayBentoOrders`,  {
                                             method: 'POST',
                                             headers: {
                                                 'Content-Type': 'application/json',

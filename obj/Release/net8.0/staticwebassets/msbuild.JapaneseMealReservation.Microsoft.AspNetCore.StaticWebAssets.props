@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kx5caeh8wf</Fingerprint>
-      <Integrity>+ASkpYyPYkyASRbfAnQi2dFUrsfOaEACw+Hy3+Pvo+k=</Integrity>
+      <Fingerprint>m6hucha8yq</Fingerprint>
+      <Integrity>gj2v81C8L/b5vUh29E47CIjs8ZWoc53SmBYKjiEo4z0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
@@ -372,8 +372,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>od40b5swla</Fingerprint>
-      <Integrity>LPXpj51MfLBfVAwtgrYiqYJQ4gvvniRjX97wlALK9As=</Integrity>
+      <Fingerprint>bbx5yobl1h</Fingerprint>
+      <Integrity>5+lwXo2HnPQtk2w/JFJ2WnV3FfTYwxZh6MpMliMF6hA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\registration.js'))</OriginalItemSpec>
@@ -390,8 +390,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>rkeorw51jz</Fingerprint>
-      <Integrity>y2rSfRWRk8pEKELJ7RlKX451JZU5pX3Ndvtesl6Mg4E=</Integrity>
+      <Fingerprint>oxdh12pzu0</Fingerprint>
+      <Integrity>NGZrEObKNOGqt5VtYVcjOZgUK4iw/3X+yCBdQSNXnyA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\reservation.js'))</OriginalItemSpec>
@@ -408,8 +408,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>you9sjdj1e</Fingerprint>
-      <Integrity>oluK1U71PZxsN3Ca+avRgEaiAukcAUy5MDBZk9B0ZWs=</Integrity>
+      <Fingerprint>pfxt2mqutv</Fingerprint>
+      <Integrity>ezdhCPdDjTuv0T0A8ACpw2rRkeGEiaNMsU0znPpopmo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</OriginalItemSpec>
@@ -1476,6 +1476,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\run-iportal\launch-I-portal-app.bat'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>run-iportal/launch-I-portal-app.bat</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>t6li4wegcq</Fingerprint>
+      <Integrity>O+BcKMs2Brzb28Hw6i4x73hYvNajSRds/fIf8NWmpdc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\run-iportal\launch-I-portal-app.bat'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\bangsilog_12_288cadda-fd26-4feb-bf01-0b5072998303.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>JapaneseMealReservation</SourceId>
@@ -1493,6 +1511,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\bangsilog_12_288cadda-fd26-4feb-bf01-0b5072998303.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\bento_4_61b0d113-0556-4260-b8a7-44b02aff8e0b.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/bento_4_61b0d113-0556-4260-b8a7-44b02aff8e0b.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vkwkd26gj4</Fingerprint>
+      <Integrity>77ayyIyu4TZ/ngGJ8iS+nsuVHsJtbPqNNaHRymEsHKk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\bento_4_61b0d113-0556-4260-b8a7-44b02aff8e0b.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\bento_5_8ceb75c7-2d63-48a9-b6bb-099628486965.jpg'))">
       <SourceType>Package</SourceType>
@@ -1638,6 +1674,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\BUTA NO SHOGAYAKI_2_c83ac280-1bd1-4407-9702-86ff69eaa75c.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\BUTA NO SHOGAYAKI_34_4d078890-e0ed-48bf-99a4-b055ab199125.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/BUTA NO SHOGAYAKI_34_4d078890-e0ed-48bf-99a4-b055ab199125.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>28e9mdt5ef</Fingerprint>
+      <Integrity>Quq6/LeJxr1LpBMkS+orAhwmRPo8eK3U/Qu/MPeIR4E=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\BUTA NO SHOGAYAKI_34_4d078890-e0ed-48bf-99a4-b055ab199125.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\BUTA NO SHOGAYAKI_3_dfa2a03d-20b1-449f-a0a5-9b215d83a327.png'))">
       <SourceType>Package</SourceType>
       <SourceId>JapaneseMealReservation</SourceId>
@@ -1692,6 +1746,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\BUTA NO SHOGAYAKI_8_08dc8c0c-6c60-41eb-810d-4a1b4fd0e7e5.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CHEESY EBI ROLL_49_719c734d-6eb9-4553-8b8f-908505a03cb9.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/CHEESY EBI ROLL_49_719c734d-6eb9-4553-8b8f-908505a03cb9.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>2yc752azet</Fingerprint>
+      <Integrity>tvVZYTswNdzsIkRtP4aSUy37KrFQlo4VGw6jGVr2/xw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\CHEESY EBI ROLL_49_719c734d-6eb9-4553-8b8f-908505a03cb9.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\curry_7_27f00a6a-1e76-4f25-92a0-82a8ff9109cf.png'))">
       <SourceType>Package</SourceType>
       <SourceId>JapaneseMealReservation</SourceId>
@@ -1727,6 +1799,96 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\curry_7_33e6010d-c5e0-43f7-b375-ee6f549c7011.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\EBI FURAI CURRY_38_ad6819d6-4f85-47ab-a960-76f68481912b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/EBI FURAI CURRY_38_ad6819d6-4f85-47ab-a960-76f68481912b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>g19mc9vxs7</Fingerprint>
+      <Integrity>vKhLk+dLL3mLkUrkd5mNWhd230e8ZSRzGYdIgOwbVg0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\EBI FURAI CURRY_38_ad6819d6-4f85-47ab-a960-76f68481912b.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\FUTO MAKI ROLL_37_c6c58bf8-f576-4c78-8f56-f66b017809c4.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/FUTO MAKI ROLL_37_c6c58bf8-f576-4c78-8f56-f66b017809c4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>sl5udyz7f8</Fingerprint>
+      <Integrity>4FxOPGfhae5JgZDaKbJwkz7aNaR5vuwJybG1VUS3Pmk=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\FUTO MAKI ROLL_37_c6c58bf8-f576-4c78-8f56-f66b017809c4.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\IKA SHOGAYAKI_33_899f51fe-b71d-4dfb-a195-572f82fca4e4.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/IKA SHOGAYAKI_33_899f51fe-b71d-4dfb-a195-572f82fca4e4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>9xg88chjtk</Fingerprint>
+      <Integrity>U3AhZYhYB4j3s5R9d0k33k3GxKwKThL4pVoXcXRtifs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\IKA SHOGAYAKI_33_899f51fe-b71d-4dfb-a195-572f82fca4e4.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\KANI CREAM KOROKKE (CRABMEAT)_45_d5d664a3-f9f2-4217-852e-22a52e6ce3c7.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/KANI CREAM KOROKKE (CRABMEAT)_45_d5d664a3-f9f2-4217-852e-22a52e6ce3c7.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ip3p5c62hs</Fingerprint>
+      <Integrity>+mumwWDX/s6JFaIBF9QLG0xq/ehDt/AXLaaqCZx7oNU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\KANI CREAM KOROKKE (CRABMEAT)_45_d5d664a3-f9f2-4217-852e-22a52e6ce3c7.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\KATSU CURRY_51_d9109a57-ee9c-4908-b545-25ec048e211d.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/KATSU CURRY_51_d9109a57-ee9c-4908-b545-25ec048e211d.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5migtfv3a6</Fingerprint>
+      <Integrity>w7TteVZ4tzqyYzHv6clVRBuondJ3Yxm6nDlWJkNPd/0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\KATSU CURRY_51_d9109a57-ee9c-4908-b545-25ec048e211d.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\maki_4_126a2b5d-1f3c-4c65-b2c3-580d7264eddc.jpg'))">
       <SourceType>Package</SourceType>
@@ -1836,6 +1998,96 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\noodles_6_acafe4c2-2fc9-4a2d-b1d4-7ac88f457950.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\OROSHI PONZU CHICKEN_48_70880dd7-7d7a-452c-9265-a08c6da7bcb5.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/OROSHI PONZU CHICKEN_48_70880dd7-7d7a-452c-9265-a08c6da7bcb5.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gms5ch916d</Fingerprint>
+      <Integrity>2J+TltWfc//7HtpBcvy5JPeQKQnoZdKMZ/EcUKMA1IE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\OROSHI PONZU CHICKEN_48_70880dd7-7d7a-452c-9265-a08c6da7bcb5.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\PORK YAKINIKU_46_ab0d8698-bace-4fe0-81a9-3122897a60df.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/PORK YAKINIKU_46_ab0d8698-bace-4fe0-81a9-3122897a60df.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>dofngh765e</Fingerprint>
+      <Integrity>42y0KFME+p/j4sGbw+pBaV6DhfFw1cxbgy193EiuB1k=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\PORK YAKINIKU_46_ab0d8698-bace-4fe0-81a9-3122897a60df.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\ROLLED TORI KATSU_32_f19d5909-32aa-4a48-a991-44a632549ed6.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/ROLLED TORI KATSU_32_f19d5909-32aa-4a48-a991-44a632549ed6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>k4nvhg0vfb</Fingerprint>
+      <Integrity>LMg2ivsd5Ur/6GDmEQy19lvfDpq5h1LWqKksE0PZauA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\ROLLED TORI KATSU_32_f19d5909-32aa-4a48-a991-44a632549ed6.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\SANSHOKU SOBORO_30_3be4d865-7d20-47b8-81f3-cd8fc0b605db.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/SANSHOKU SOBORO_30_3be4d865-7d20-47b8-81f3-cd8fc0b605db.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>can13pg1cl</Fingerprint>
+      <Integrity>JFMHe1iOg+gfdpVenkAuVR/qE78xZiyFiycQnZkkhTg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\SANSHOKU SOBORO_30_3be4d865-7d20-47b8-81f3-cd8fc0b605db.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\SHOYU RAMEN_52_b132b311-669a-4293-bc9e-49b75c3be39c.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/SHOYU RAMEN_52_b132b311-669a-4293-bc9e-49b75c3be39c.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>32971baern</Fingerprint>
+      <Integrity>ZQn39skbyKXXPVLbmHbKB7obHWm2t6S65VWvka1oc6c=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\SHOYU RAMEN_52_b132b311-669a-4293-bc9e-49b75c3be39c.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\silog_10_4522ce6f-9965-47ed-a331-cb44ed7e950d.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>JapaneseMealReservation</SourceId>
@@ -1853,6 +2105,114 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\silog_10_4522ce6f-9965-47ed-a331-cb44ed7e950d.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\SPICY NEGI RAMEN_39_b4116df5-0f97-4927-9fa0-18bf6e8163b5.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/SPICY NEGI RAMEN_39_b4116df5-0f97-4927-9fa0-18bf6e8163b5.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3i7s7zcf76</Fingerprint>
+      <Integrity>+2fVlybVrdgZ5JyP+o9EuBnAZtWncbuVLpWzFF5Rw5o=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\SPICY NEGI RAMEN_39_b4116df5-0f97-4927-9fa0-18bf6e8163b5.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\SUBUTA_47_e4e6baf0-2dba-46cc-8785-be83bfbf162e.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/SUBUTA_47_e4e6baf0-2dba-46cc-8785-be83bfbf162e.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7g3o4zeudv</Fingerprint>
+      <Integrity>d3dD4lMANpgSlELmBuFwPoFuh68rSdOBzufSvsEZR2o=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\SUBUTA_47_e4e6baf0-2dba-46cc-8785-be83bfbf162e.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\TONPEIYAKI_31_1a713dd7-41a9-40f6-8555-41484df26bac.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/TONPEIYAKI_31_1a713dd7-41a9-40f6-8555-41484df26bac.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0wx3rp0mlo</Fingerprint>
+      <Integrity>UE2P5KE7JORTShrGcngljxrvk8IC+sx5WjB4jy4Awtg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\TONPEIYAKI_31_1a713dd7-41a9-40f6-8555-41484df26bac.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\TUNA MAKI ROLL_20_65304b79-b4a6-4f80-b2c3-f6252f458e1c.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/TUNA MAKI ROLL_20_65304b79-b4a6-4f80-b2c3-f6252f458e1c.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gl541ytvxa</Fingerprint>
+      <Integrity>rBECpyr7J2imdR4y/l29y8sUNA6L7gvUS3kZw4Ncy4A=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\TUNA MAKI ROLL_20_65304b79-b4a6-4f80-b2c3-f6252f458e1c.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\TUNA MAKI ROLL_35_cd35236d-1e78-4734-a8a3-ea8d47e9a320.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/TUNA MAKI ROLL_35_cd35236d-1e78-4734-a8a3-ea8d47e9a320.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>x6k3198i5g</Fingerprint>
+      <Integrity>BxKGN3tbqfmXiw07INFCLyQCpHCFEEI/0/Y7vtnIlJw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\TUNA MAKI ROLL_35_cd35236d-1e78-4734-a8a3-ea8d47e9a320.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\YAKI SOBA_36_8d970d88-027c-4ed9-8392-ee49f22f562b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>JapaneseMealReservation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JapaneseMealReservation</BasePath>
+      <RelativePath>uploads/YAKI SOBA_36_8d970d88-027c-4ed9-8392-ee49f22f562b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>u1ok971y93</Fingerprint>
+      <Integrity>PpQ3yllaFXngbKRdWCYBtldvIhMuV0AihHcG/cu4P80=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\YAKI SOBA_36_8d970d88-027c-4ed9-8392-ee49f22f562b.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

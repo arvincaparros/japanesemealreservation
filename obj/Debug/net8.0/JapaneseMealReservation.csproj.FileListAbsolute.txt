@@ -210,4 +210,9 @@ C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Debug\net8.0\sv\Hangfire
 C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Debug\net8.0\tr-TR\Hangfire.Core.resources.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Debug\net8.0\zh-TW\Hangfire.Core.resources.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Debug\net8.0\zh\Hangfire.Core.resources.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Debug\net8.0\JapaneseMealReservation.sourcelink.json
+C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Debug\net8.0\MailKit.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Debug\net8.0\MimeKit.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\caparrar\Documents\JapaneseMealReservation\bin\Debug\net8.0\TimeZoneConverter.dll

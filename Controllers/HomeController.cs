@@ -1,12 +1,18 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
+using System.Net;
+using System.Net.Sockets;
 using System.Security.Claims;
+using DocumentFormat.OpenXml.InkML;
 using JapaneseMealReservation.AppData;
 using JapaneseMealReservation.Models;
 using JapaneseMealReservation.ViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace JapaneseMealReservation.Controllers
 {
@@ -14,24 +20,29 @@ namespace JapaneseMealReservation.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly AppDbContext dbContext;
+        private readonly SqlServerDbContext sqlDbContext;
 
-        public HomeController(ILogger<HomeController> logger, AppDbContext dbContext)
+        public HomeController(ILogger<HomeController> logger, AppDbContext dbContext, SqlServerDbContext sqlDbContext)
         {
             _logger = logger;
             this.dbContext = dbContext;
+            this.sqlDbContext = sqlDbContext;
         }
+     
 
         public IActionResult Index()
         {
             return View();
         }
 
+       
+
         [AllowAnonymous]
         public IActionResult Login()
         {
             return View();
         }
-         
+
         [HttpPost]
         [AllowAnonymous]
         public async Task<IActionResult> Login(Login model)
@@ -50,7 +61,7 @@ namespace JapaneseMealReservation.Controllers
             if (user == null)
             {
                 ViewBag.ErrorMessage = "Invalid username or password.";
-                return View(model); 
+                return View(model);
             }
 
             // Create a list of claims (user identity data), here storing the user's first name
@@ -78,7 +89,114 @@ namespace JapaneseMealReservation.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-      
+        //[HttpGet]
+        //[AllowAnonymous]
+        //public IActionResult IportalConfirmationForm(string? ip = null)
+        //{
+        //    // Use the passed IP or fallback to server-side IP
+        //    string userIP = GetClientIp(HttpContext);
+
+        //    return View(model: userIP);
+        //}
+
+        //public string GetClientIp(HttpContext context)
+        //{
+        //    var forwardedHeader = context.Request.Headers["X-Forwarded-For"].FirstOrDefault();
+        //    if (!string.IsNullOrWhiteSpace(forwardedHeader))
+        //    {
+        //        return forwardedHeader.Split(',')[0].Trim();
+        //    }
+
+        //    var remoteIp = context.Connection.RemoteIpAddress;
+
+        //    if (remoteIp != null)
+        //    {
+        //        if (remoteIp.IsIPv4MappedToIPv6)
+        //        {
+        //            return remoteIp.MapToIPv4().ToString(); // Converts ::ffff:127.0.0.1 to 127.0.0.1
+        //        }
+
+        //        // Convert ::1 to 127.0.0.1 manually
+        //        if (remoteIp.ToString() == "::1")
+        //        {
+        //            return remoteIp.ToString();
+        //        }
+
+        //        return remoteIp.ToString();
+        //    }
+
+        //    return "IP Not Found";
+        //}
+
+
+        //[HttpGet]
+        //[AllowAnonymous]
+        //public async Task<IActionResult> Login()
+        //{
+        //    string localIP = GetClientIp(HttpContext); // use helper method
+        //    if (IPAddress.TryParse(localIP, out var ip))
+        //    {
+        //        if (ip.IsIPv4MappedToIPv6)
+        //            localIP = ip.MapToIPv4().ToString(); // Force to IPv4 format
+        //    }
+
+        //    //Console.WriteLine($"Raw Remote IP: {HttpContext.Connection.RemoteIpAddress}");
+        //    //Console.WriteLine($"Client IP: {GetClientIp(HttpContext)}");
+
+        //    long systemId = 70; // Change if needed
+
+        //    //Console.WriteLine($"Local IP: {localIP}");
+
+        //    // ✅ Get the latest login request for the IP
+        //    var loginEntry = await sqlDbContext.Tbl_LOGIN_Request
+        //        .Where(x => x.IpAddress == localIP && x.SystemId == systemId)
+        //        .OrderByDescending(x => x.Id)
+        //        .FirstOrDefaultAsync();
+
+        //    // Condition 1: No login request OR
+        //    // Condition 2: Request found but not active or missing EmployeeId
+        //    if (loginEntry == null ||
+        //        string.IsNullOrWhiteSpace(loginEntry.EmployeeId) ||
+        //        !loginEntry.Status.Equals("ACTIVE", StringComparison.OrdinalIgnoreCase))
+        //    {
+        //        // Show the IportalConfirmationForm if not using WinForms app
+        //        //return RedirectToAction("IportalConfirmationForm", "Home");
+        //        return View();
+        //    }
+
+        //    // Lookup the Employee in your main Users table
+        //    var user = await dbContext.Users
+        //        .FirstOrDefaultAsync(x => x.EmployeeId == loginEntry.EmployeeId);
+
+        //    if (user == null)
+        //    {
+        //        TempData["ShowRegisterAlert"] = true;
+        //        return RedirectToAction("Register", "Home");
+        //    }
+
+        //    // Sign in logic
+        //    var claims = new List<Claim>
+        //    {
+        //        new Claim("EmployeeId", user.EmployeeId ?? ""),
+        //        new Claim(ClaimTypes.GivenName, user.FirstName ?? ""),
+        //        new Claim(ClaimTypes.Surname, user.LastName ?? ""),
+        //        new Claim(ClaimTypes.Email, user.Email ?? ""),
+        //        new Claim("Section", user.Section ?? ""),
+        //        new Claim(ClaimTypes.Role, user.UserRole ?? ""),
+        //        new Claim("EmployeeType", user.EmployeeType ?? "")
+        //    };
+
+        //    Console.WriteLine("Redirecting to IportalConfirmationForm due to: " +
+        //    (loginEntry == null ? "No login entry" :
+        //    string.IsNullOrWhiteSpace(loginEntry.EmployeeId) ? "Missing EmployeeId" :
+        //    "Inactive status"));
+
+        //    var identity = new ClaimsIdentity(claims, "MyCookieAuth");
+        //    var principal = new ClaimsPrincipal(identity);
+        //    await HttpContext.SignInAsync("MyCookieAuth", principal);
+
+        //    return RedirectToAction("Index", "Home");
+        //}
 
         [HttpPost]
         public async Task<IActionResult> Logout()
@@ -87,12 +205,44 @@ namespace JapaneseMealReservation.Controllers
             return RedirectToAction("Login", "Home");
         }
 
+        [AllowAnonymous]
         public IActionResult Register()
         {
             return View();
         }
 
+        //[AllowAnonymous]
+        //[HttpPost]
+        //public IActionResult Register(User model)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(model);
+        //    }
+
+        //    //Set role
+        //    model.UserRole = model.Section?.ToUpper() == "GA" ? "ADMIN" : "EMPLOYEE";
+
+        //    // Set employee type if ID contains "BIPH-JP"
+        //    if (!string.IsNullOrEmpty(model.EmployeeId) && model.EmployeeId.Contains("BIPH-JP", StringComparison.OrdinalIgnoreCase))
+        //    {
+        //        model.EmployeeType = "Expat";
+        //    }
+        //    else
+        //    {
+        //        model.EmployeeType = "Local"; 
+        //    }
+
+        //    dbContext.Users.Add(model);
+        //    dbContext.SaveChanges();
+
+        //    TempData["RegisterSuccess"] = true;
+
+        //    return RedirectToAction("Register");
+        //}
+
         [HttpPost]
+        [AllowAnonymous]
         public IActionResult Register(User model)
         {
             if (!ModelState.IsValid)
@@ -100,28 +250,55 @@ namespace JapaneseMealReservation.Controllers
                 return View(model);
             }
 
-            //Set role
+            // Determine role and employee type (used in PostgreSQL save)
             model.UserRole = model.Section?.ToUpper() == "GA" ? "ADMIN" : "EMPLOYEE";
+            model.EmployeeType = model.EmployeeId?.Contains("BIPH-JP", StringComparison.OrdinalIgnoreCase) == true
+                ? "Expat"
+                : "Local";
 
-            // Set employee type if ID contains "BIPH-JP"
-            if (!string.IsNullOrEmpty(model.EmployeeId) && model.EmployeeId.Contains("BIPH-JP", StringComparison.OrdinalIgnoreCase))
+            // Exclude Position and ADID from PostgreSQL insert by creating a stripped model
+            var pgUser = new User
             {
-                model.EmployeeType = "Expat";
-            }
-            else
-            {
-                model.EmployeeType = "Local"; 
-            }
+                EmployeeId = model.EmployeeId,
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                Email = model.Email,
+                Section = model.Section,
+                Password = model.Password,
+                CreatedDate = DateTime.UtcNow,
+                UserRole = model.UserRole,
+                EmployeeType = model.EmployeeType
+                // Do not assign Position and ADID here – they are not in the PostgreSQL 'users' table
+            };
 
-            dbContext.Users.Add(model);
+            // Save to PostgreSQL
+            dbContext.Users.Add(pgUser);
             dbContext.SaveChanges();
 
+            // Save approver data to SQL Server (these fields may exist in SQL Server only)
+            var newApprover = new CasSystemApproverList
+            {
+                SystemID = "70",
+                SystemName = "Japanese Meal Reservation System",
+                ApproverNumber = "0",
+                FullName = $"{model.FirstName} {model.LastName}",
+                EmailAddress = model.Email,
+                SECTION = model.Section,
+                POSITION = model.Position,
+                ADID = model.ADID,
+                EmployeeNumber = model.EmployeeId
+            };
+
+            sqlDbContext.Tbl_System_Approver_list.Add(newApprover);
+            sqlDbContext.SaveChanges();
+
             TempData["RegisterSuccess"] = true;
-
             return RedirectToAction("Register");
-
         }
 
+
+
+        //[AllowAnonymous]
         [HttpGet]
         public IActionResult GetEmployeeById(string id)
         {
@@ -139,12 +316,14 @@ namespace JapaneseMealReservation.Controllers
             });
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult ForgotPassword()
         {
             return View();
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public IActionResult ForgotPassword(ForgotPasswordViewModel model)
         {

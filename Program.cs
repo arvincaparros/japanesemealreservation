@@ -4,6 +4,7 @@ using JapaneseMealReservation.AppData;
 using JapaneseMealReservation.DataTransferObject;
 using JapaneseMealReservation.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
 
@@ -17,6 +18,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddDbContext<SqlServerDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConnection")));
+
 
 builder.Services.Configure<EmailSettings>(
     builder.Configuration.GetSection("EmailSettings"));
@@ -44,7 +46,16 @@ builder.Services.AddAuthentication("MyCookieAuth").AddCookie("MyCookieAuth", opt
     // Optional: Automatically redirect to login on expiration
     options.Events.OnRedirectToLogin = context =>
     {
-        context.Response.Redirect("/Home/Login");
+        var isApiRequest = context.Request.Path.StartsWithSegments("/Employee")
+                       || context.Request.Path.StartsWithSegments("/Reservation");
+
+        if (isApiRequest)
+        {
+            context.Response.StatusCode = 401; // Unauthorized
+            return Task.CompletedTask;
+        }
+
+        context.Response.Redirect(context.RedirectUri);
         return Task.CompletedTask;
     };
 });
@@ -57,9 +68,24 @@ builder.Services.AddAuthorization(options =>
         .Build();
 });
 
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+
+    // OPTIONAL: Add known proxy IPs if behind a proxy
+    // options.KnownProxies.Add(IPAddress.Parse("YOUR_PROXY_IP")); 
+    // or use this to allow all
+    options.KnownNetworks.Clear();
+    options.KnownProxies.Clear();
+});
+
+
 builder.Services.AddSession();
 
 var app = builder.Build();
+
+//VERY IMPORTANT: This must come before any authentication or IP logic
+app.UseForwardedHeaders();
 
 app.UseHangfireDashboard("/hangfire");
 
@@ -81,6 +107,7 @@ else
 }
 
 app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 
 app.UseRouting();
