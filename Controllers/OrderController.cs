@@ -343,6 +343,7 @@ namespace JapaneseMealReservation.Controllers
                     var orderSummaries = dbContext.OrderSummaryView
                         .Where(x => x.EmployeeId == employeeId &&
                                     x.ReservationDate >= todayPHStartUtc)
+                        .OrderBy(x => x.ReservationDate) // ascending order
                         .ToList();
 
                     return View(orderSummaries);
@@ -360,12 +361,11 @@ namespace JapaneseMealReservation.Controllers
 
             var orders = await dbContext.OrderSummaryView
                 .Where(x => x.EmployeeId == employeeIdFromLogin)
+                 .OrderBy(x => x.ReservationDate) // ascending order
                 .ToListAsync();
 
             return View(orders);
         }
-
-
 
 
         [HttpGet]
@@ -596,7 +596,7 @@ namespace JapaneseMealReservation.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public IActionResult CompleteTodayBentoOrders(string MenuType)
         {
             var phTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Manila");
@@ -641,7 +641,7 @@ namespace JapaneseMealReservation.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public IActionResult CompleteTodayCurryOrders(string MenuType)
         {
             var phTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Manila");
@@ -686,7 +686,7 @@ namespace JapaneseMealReservation.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public IActionResult CompleteTodayMakiOrders(string MenuType)
         {
             var phTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Manila");
@@ -731,7 +731,7 @@ namespace JapaneseMealReservation.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public IActionResult CompleteTodayNoodlesOrders(string MenuType)
         {
             var phTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Manila");
@@ -776,7 +776,7 @@ namespace JapaneseMealReservation.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public IActionResult CompleteTodayBreakfastOrders(string MenuType)
         {
             var phTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Manila");

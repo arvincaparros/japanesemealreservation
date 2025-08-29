@@ -37,7 +37,7 @@
                             {
                                 <option value="@m">
                                     @CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(m)
-                                </option>
+                                </option >
                             }
                         }
                     </select>
@@ -111,20 +111,22 @@
                 $('#loadingSpinner').removeClass('d-none');
 
                 $.ajax({
-                    url: '/Reservation/ExpatAdvanceReservation',
+                    url: '@Url.Action("ExpatAdvanceReservation", "Reservation")',
                     type: 'GET',
                     data: { month: month, year: year },
                     success: function (result) {
                         $('#reservationTableContainer').html(result);
                         bindBatchFormValidation();
                     },
-                    error: function () {
+                    error: function (xhr) {
+                        console.error("Error:", xhr.status, xhr.responseText);
                         alert('Failed to load reservation table.');
                     },
                     complete: function () {
                         $('#loadingSpinner').addClass('d-none');
                     }
                 });
+
             }
 
             // $('#monthSelect, #yearSelect').on('change', loadReservationTable);
@@ -141,24 +143,24 @@
         @if (ViewBag.ShowSuccessAlert != null && (bool)ViewBag.ShowSuccessAlert)
         {
             <text>
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Success!',
-                        text: 'Orders submitted successfully!',
-                        confirmButtonColor: '#198754'
-                    });
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: 'Orders submitted successfully!',
+                    confirmButtonColor: '#198754'
+                });
             </text>
         }
 
         @if (ViewBag.ShowErrorAlert != null && (bool)ViewBag.ShowErrorAlert)
         {
             <text>
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops!',
-                        text: 'There was a problem submitting the orders.',
-                        confirmButtonColor: '#d33'
-                    });
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops!',
+                    text: 'There was a problem submitting the orders.',
+                    confirmButtonColor: '#d33'
+                });
             </text>
         }
     </script>

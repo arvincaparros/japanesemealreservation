@@ -1,7 +1,7 @@
 ﻿
 @{
-	ViewData["ShowDashboardHeader"] = true;
-	ViewData["Title"] = "Order Details";
+    ViewData["ShowDashboardHeader"] = true;
+    ViewData["Title"] = "Order Details";
 }
 
 @model List<JapaneseMealReservation.ViewModels.OrderSummaryViewModel>
@@ -62,7 +62,7 @@
                                         var total = item.Quantity * item.Price;
                                         grandTotal += total;
 
-                                        var reservationDatePH = item.ReservationDate;
+                                        var reservationDatePH = TimeZoneInfo.ConvertTimeFromUtc(item.ReservationDate, phTimeZone);
                                         var reservationDateOnly = reservationDatePH.Date;
 
 

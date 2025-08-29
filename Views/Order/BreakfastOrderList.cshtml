@@ -170,7 +170,6 @@
                                     afterPrint: function () {
                                         // ✅ Update status after both prints
                                         const baseUrl = window.appBaseUrl || '/';
-
                                         fetch(`${baseUrl}Order/CompleteTodayBreakfastOrders`, {
                                             method: 'POST',
                                             headers: {
@@ -190,6 +189,10 @@
                                                     location.reload();
                                                 }
                                             });
+                                        })
+                                        .catch(err => {
+                                            console.error('Fetch error:', err);
+                                            Swal.fire('Error', 'Something went wrong: ' + err.message, 'error');
                                         });
                                     }
                                 });

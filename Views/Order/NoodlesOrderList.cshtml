@@ -159,7 +159,7 @@
                         // ✅ Only print after confirm
                         $('#printLocal').printThis({
                             importCSS: true,
-                            loadCSS: "/css/site.css",
+                            loadCSS: `${window.appBaseUrl || ''}css/site.css`,
                             header: `<h2>${menuType}</h2><p>Date: ${today}</p><hr />`,
                             afterPrint: function () {
                                 $('#printExpat').printThis({
@@ -172,8 +172,8 @@
                                         fetch(`${baseUrl}Order/CompleteTodayNoodlesOrders`, {
                                             method: 'POST',
                                             headers: {
-                                                'Content-Type': 'application/json',
-                                                'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                                                'Content-Type': 'application/json'
+                                                // 'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
                                             },
                                             body: JSON.stringify({ menuType: menuType })
                                         })
