@@ -240,7 +240,7 @@ namespace JapaneseMealReservation.Controllers
                                         <p style='font-size: 16px; color: #555;'>Your meal order has been <strong>successfully placed</strong>. Here are the details:</p>
                                         <table width='100%' cellpadding='0' cellspacing='0' style='margin-top: 20px;'>
                                             <tr><td><strong>Reference #:</strong></td><td style='padding: 8px 0;'>{model.ReferenceNumber}</td></tr>
-                                            <tr style='background-color: #f5f5f5;'><td style='padding: 8px 0;'><strong>Menu:</strong></td><td style='padding: 8px 0;'>{model.MenuType ?? "N/A"}</td></tr>
+                                            <tr style='background-color: #f5f5f5;'><td style='padding: 8px 0;'><strong>Menu:</strong></td><td style='padding: 8px 0;'>{model.MenuType ?? "N/A"}</td></tr
                                             <tr><td style='padding: 8px 0;'><strong>Quantity:</strong></td><td style='padding: 8px 0;'>{model.Quantity}</td></tr>
                                             <tr style='background-color: #f5f5f5;'><td style='padding: 8px 0;'><strong>Date:</strong></td><td style='padding: 8px 0;'>{model.ReservationDate:yyyy-MM-dd}</td></tr>
                                             <tr><td style='padding: 8px 0;'><strong>Meal Time:</strong></td><td style='padding: 8px 0;'>{model.MealTime}</td></tr>

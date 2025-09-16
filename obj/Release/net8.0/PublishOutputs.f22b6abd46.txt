@@ -74,6 +74,7 @@ C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\PubTmp\Ou
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\PubTmp\Out\System.Text.Encodings.Web.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\PubTmp\Out\System.Text.Json.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\PubTmp\Out\System.Windows.Extensions.dll
+C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\PubTmp\Out\TimeZoneConverter.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\PubTmp\Out\ca\Hangfire.Core.resources.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\PubTmp\Out\de\Hangfire.Core.resources.dll
 C:\Users\caparrar\Documents\JapaneseMealReservation\obj\Release\net8.0\PubTmp\Out\es\Hangfire.Core.resources.dll

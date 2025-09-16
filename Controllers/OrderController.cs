@@ -5,6 +5,10 @@ using Microsoft.EntityFrameworkCore;
 using JapaneseMealReservation.Services;
 using DocumentFormat.OpenXml.InkML;
 using Microsoft.AspNetCore.Authorization;
+using DocumentFormat.OpenXml.Drawing.Charts;
+using JapaneseMealReservation.Migrations;
+using Order = JapaneseMealReservation.Models.Order;
+using JapaneseMealReservation.ViewModels;
 
 namespace JapaneseMealReservation.Controllers
 {
@@ -151,7 +155,7 @@ namespace JapaneseMealReservation.Controllers
                                                 </tr>
                                                 <tr style='background-color: #f5f5f5;'>
                                                     <td style='padding: 8px 0;'><strong>Menu:</strong></td>
-                                                    <td style='padding: 8px 0;'>{order.OrderName ?? "N/A"}</td>
+                                                    <td style='padding: 8px 0;'>{order.MenuType}: {order.OrderName ?? "N/A"}</td>
                                                 </tr>
                                                 <tr>
                                                     <td style='padding: 8px 0;'><strong>Quantity:</strong></td>
@@ -381,7 +385,7 @@ namespace JapaneseMealReservation.Controllers
             var phTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Manila");
 
             var events = dbContext.OrderSummaryView
-                .Where(o => o.EmployeeId == employeeId)
+                .Where(o => o.EmployeeId == employeeId && o.Status != "Cancelled")
                 .ToList() // Fetch first, then convert to local time
                 .Select(o => new
                 {
@@ -394,7 +398,7 @@ namespace JapaneseMealReservation.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateQuantity(string ReferenceNumber, int Quantity)
+        public IActionResult UpdateQuantity(string ReferenceNumber, int Quantity, string OrderName, string MenuType)
         {
             var source = dbContext.CombineOrders
                 .Where(x => x.ReferenceNumber == ReferenceNumber)
@@ -414,6 +418,8 @@ namespace JapaneseMealReservation.Controllers
                 if (order != null)
                 {
                     order.Quantity = Quantity;
+                    order.OrderName = OrderName;
+                    order.MenuType = MenuType;
                 }
             }
             else if (source == "AdvanceOrder")
@@ -422,14 +428,18 @@ namespace JapaneseMealReservation.Controllers
                 if (advOrder != null)
                 {
                     advOrder.Quantity = Quantity;
+                    advOrder.MenuName = OrderName;
+                    advOrder.MenuType = MenuType;
                 }
             }
 
             dbContext.SaveChanges();
+
             TempData["UpdateStatus"] = "success";
-            TempData["UpdateMessage"] = "Quantity updated successfully.";
+            TempData["UpdateMessage"] = "Order updated successfully.";
             return RedirectToAction("OrderSummary");
         }
+
 
         //[HttpPost]
         //public IActionResult CancelOrder(string ReferenceNumber)
@@ -487,6 +497,7 @@ namespace JapaneseMealReservation.Controllers
 
             string email = null;
             string name = null;
+            string orderDetails = null;
             DateTime? date = null;
             TimeSpan? time = null;
 
@@ -504,6 +515,7 @@ namespace JapaneseMealReservation.Controllers
                         name = order.FirstName;
                         date = order.ReservationDate;
                         time = order.MealTime;
+                        orderDetails = $"{order.MenuType}: {order.OrderName}";
                     }
                 }
             }
@@ -521,6 +533,7 @@ namespace JapaneseMealReservation.Controllers
                         email = user.Email;
                         name = advOrder.FirstName;
                         date = advOrder.ReservationDate;
+                        orderDetails = $"{advOrder.MenuType}: {advOrder.MenuName}";
                         if (!string.IsNullOrWhiteSpace(advOrder.MealTime))
                         {
                             if (TimeSpan.TryParse(advOrder.MealTime, out var parsedTime))
@@ -547,7 +560,7 @@ namespace JapaneseMealReservation.Controllers
                                     <td style='background-color: #c0392b; padding: 20px; color: #ffffff; text-align: center;'>
                                         <h2 style='margin: 0;'>Order Cancelled</h2>
                                     </td>
-                                </tr>
+                                </tr> 
                                 <tr>
                                     <td style='padding: 30px;'>
                                         <h3 style='color: #333;'>Hi {name},</h3>
@@ -556,6 +569,10 @@ namespace JapaneseMealReservation.Controllers
                                             <tr>
                                                 <td><strong>Reference #:</strong></td>
                                                 <td style='padding: 8px 0;'>{ReferenceNumber}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Order:</strong></td>
+                                                <td style='padding: 8px 0;'>{orderDetails}</td>
                                             </tr>
                                             <tr style='background-color: #f5f5f5;'>
                                                 <td style='padding: 8px 0;'><strong>Reservation Date:</strong></td>
@@ -821,5 +838,25 @@ namespace JapaneseMealReservation.Controllers
         }
 
 
+        [HttpGet]
+        public async Task<IActionResult> GetMenus(DateTime reservationDate, string menuType)
+        {
+            var menus = await dbContext.Menus
+                .Where(m => m.MenuType == menuType && m.AvailabilityDate.HasValue)
+                .ToListAsync();  // bring them into memory
+
+            var result = menus
+                .Where(m => m.AvailabilityDate.Value.Date == reservationDate.Date)
+                .Select(m => new {
+                    m.Id,
+                    m.MenuType,
+                    m.Name
+                })
+                .ToList();
+
+            return Json(result);
+        }
+      
     }
+
 }

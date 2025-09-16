@@ -37,7 +37,8 @@
                                     <tr>
                                         <th>Reference #</th>
                                         <th>Date</th>
-                                        <th>Item</th>
+                                        <th>Menu</th>
+                                        <th>Name</th>
                                         <th>Qty</th>
                                         <th>Price (₱)</th>
                                         <th>Total (₱)</th>
@@ -93,6 +94,7 @@
                                             <td>@item.ReferenceNumber</td>
                                             <td>@reservationDateOnly.ToString("yyyy-MM-dd")</td>
                                             <td>@item.MenuType</td>
+                                            <td>@item.MenuName</td>
                                             <td>@item.Quantity</td>
                                             <td>₱@item.Price.ToString("N2")</td>
                                             <td>₱@total.ToString("N2")</td>
@@ -104,6 +106,9 @@
                                                         data-bs-target="#editQuantityModal"
                                                         data-qty="@item.Quantity"
                                                         data-ref="@item.ReferenceNumber"
+                                                        data-date="@reservationDateOnly.ToString("yyyy-MM-dd")"
+                                                        data-menu="@item.MenuType"
+                                                        data-name="@item.MenuName"
                                                 @(disableButtons ? "disabled style='pointer-events: none; opacity: 0.5;'" : "")>
                                                     <i class="fa-solid fa-pen-to-square"></i> Edit
                                                 </button>
@@ -125,7 +130,7 @@
                                 </tbody>
                                 <tfoot>
                                     <tr class="fw-bold text-end">
-                                        <td colspan="5">Grand Total</td>
+                                        <td colspan="6">Grand Total</td>
                                         <td>₱@grandTotal.ToString("N2")</td>
                                     </tr>
                                 </tfoot>
@@ -150,7 +155,8 @@
                                     @foreach (var item in Model
                                     .Where(o => o.Status != "Pending" &&
                                         o.ReservationDate.Date >= startDate &&
-                                        o.ReservationDate.Date <= endDate))
+                                        o.ReservationDate.Date <= endDate)
+                                    .OrderByDescending(o => o.ReservationDate))
                                     {
                                         var total = item.Quantity * item.Price;
                                         <tr>
@@ -209,6 +215,51 @@
                 <div class="modal-body p-4">
                     <input type="hidden" name="ReferenceNumber" id="referenceNumber" />
 
+                    <!-- Reservation Date -->
+                    <div class="mb-3">
+                        <label for="reservationDate" class="form-label fw-semibold">Date</label>
+                        <input type="text"
+                               class="form-control form-control-lg shadow-sm rounded-3"
+                               name="ReservationDate"
+                               id="reservationDate"
+                               readonly />
+                    </div>
+
+                    <!-- Menu Category -->
+                    <div class="mb-3">
+                        <label for="menuType" class="form-label fw-semibold">Menu</label>
+                        <select class="form-select form-select-lg shadow-sm rounded-3"
+                                name="MenuType"
+                                id="menuType"
+                                required>
+                            <option value="">-- Select Menu --</option>
+                        </select>
+                    </div>
+
+                    <!-- Dish Name (e.g., Tonkatsu, Katsudon) -->
+                    <div class="mb-3">
+                        <label for="orderName" class="form-label fw-semibold">Name</label>
+                        <input type="text"
+                               class="form-control form-control-lg shadow-sm rounded-3"
+                               name="OrderName"
+                               id="orderName"
+                               readonly />
+                    </div>
+
+                  @*   <!-- Dish Name -->
+                    <div class="mb-3">
+                        <label for="orderName" class="form-label fw-semibold">Name</label>
+                        <select class="form-select form-select-lg shadow-sm rounded-3"
+                                name="OrderName"
+                                id="orderName"
+                                required>
+                            <option value="">-- Select Name --</option>
+                        </select>
+                    </div> *@
+
+
+                  
+                    <!-- Quantity -->
                     <div class="mb-3">
                         <label for="orderQuantity" class="form-label fw-semibold">Quantity</label>
                         <input type="number"
@@ -230,6 +281,7 @@
                     </button>
                 </div>
             </form>
+
         </div>
     </div>
 </div>
@@ -238,44 +290,81 @@
 @section Scripts {
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-
-            //Edit order quantity
+            // Show success/error messages after update
             const status = '@TempData["UpdateStatus"]';
             const message = '@TempData["UpdateMessage"]';
 
             if (status === 'success') {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Success',
-                    text: message || 'Quantity updated successfully!'
-                });
+                Swal.fire({ icon: 'success', title: 'Success', text: message || 'Quantity updated successfully!' });
             } else if (status === 'error') {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error',
-                    text: message || 'Failed to update quantity.'
-                });
+                Swal.fire({ icon: 'error', title: 'Error', text: message || 'Failed to update quantity.' });
             }
 
-            
+            // Menu sets per weekday
+            const weekdayMenus = {
+                1: ['Bento', 'Maki'],      // Monday
+                2: ['Bento', 'Noodles'],   // Tuesday
+                3: ['Bento', 'Maki'],     // Wednesday
+                4: ['Bento', 'Curry'],    // Thursday
+                5: ['Bento', 'Noodles'],  // Friday
+                6: ['Bento']              // Saturday
+            };
+
+            const editDateInput = document.getElementById('reservationDate');
+            const editMenuSelect = document.getElementById('menuType');
+            const orderNameInput = document.getElementById('orderName');
+
+            // 🔥 Global function to populate menu
+            function populateMenus(dateStr, preselectMenu = null) {
+                if (!dateStr) return;
+                const date = new Date(dateStr);
+                const day = date.getDay();
+
+                editMenuSelect.innerHTML = '<option value="">-- Select Menu --</option>';
+
+                if (day === 0) {
+                    editMenuSelect.innerHTML = '<option value="">-- No menu available (Sunday) --</option>';
+                    editMenuSelect.disabled = true;
+                    return;
+                }
+
+                if (weekdayMenus[day]) {
+                    weekdayMenus[day].forEach(menuItem => {
+                        const option = document.createElement('option');
+                        option.value = menuItem;
+                        option.textContent = menuItem;
+                        if (preselectMenu && preselectMenu === menuItem) {
+                            option.selected = true;
+                        }
+                        editMenuSelect.appendChild(option);
+                    });
+                    editMenuSelect.disabled = false;
+                }
+            }
+
+            // When modal is opened
             document.querySelectorAll('[data-bs-target="#editQuantityModal"]').forEach(button => {
                 button.addEventListener('click', () => {
                     const qty = button.getAttribute('data-qty');
-                    const ref = button.getAttribute('data-ref'); // Make sure button includes data-ref
+                    const ref = button.getAttribute('data-ref');
+                    const date = button.getAttribute('data-date');
+                    const menu = button.getAttribute('data-menu'); // e.g., Bento
+                    const name = button.getAttribute('data-name'); // e.g., Tonkatsu
 
                     document.getElementById('orderQuantity').value = qty;
-                    document.getElementById('referenceNumber').value = ref; // Ensure hidden input exists
+                    document.getElementById('referenceNumber').value = ref;
+                    editDateInput.value = date;
+                    orderNameInput.value = name;
+
+                    // 🔥 Populate menus for that date and auto-select the existing one
+                    populateMenus(date, menu);
                 });
             });
 
-
-            //Cancel order
-             // const appBasePath = appBasePath || '/'; // fallback if not set
-
+            // Cancel order logic
             document.querySelectorAll(".cancel-order-btn").forEach(btn => {
                 btn.addEventListener("click", function () {
                     const referenceNumber = this.getAttribute("data-ref");
-
                     Swal.fire({
                         title: 'Cancel this order?',
                         text: "This action cannot be undone.",
@@ -312,8 +401,39 @@
                 });
             });
         });
+
+        document.getElementById("menuType").addEventListener("change", function () {
+            const menuType = this.value;
+            const reservationDate = document.getElementById("reservationDate").value;
+
+            if (!menuType || !reservationDate) return;
+
+            const url = '@Url.Action("GetMenus", "Order")';
+            fetch(`${url}?reservationDate=${encodeURIComponent(reservationDate)}&menuType=${encodeURIComponent(menuType)}`)
+                .then(res => {
+                    if (!res.ok) throw new Error("Server error: " + res.status);
+                    return res.json();
+                })
+                .then(data => {
+                    const orderNameInput = document.getElementById("orderName");
+
+                    if (data.length > 0) {
+                        orderNameInput.value = data[0].name || data[0].Name;
+                    } else {
+                        orderNameInput.value = "No menu available";
+                    }
+                })
+                .catch(err => {
+                    console.error("Fetch error:", err);
+                    Swal.fire({
+                        icon: "error",
+                        title: "Server Error",
+                        text: "Failed to fetch menu. Please try again."
+                    });
+                });
+        });
+
+
     </script>
-
 }
-
 

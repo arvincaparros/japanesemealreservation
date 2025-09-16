@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using JapaneseMealReservation.AppData;
 using JapaneseMealReservation.ViewModels;
+using DocumentFormat.OpenXml.InkML;
 
 namespace JapaneseMealReservation.Controllers
 {
@@ -117,11 +118,48 @@ namespace JapaneseMealReservation.Controllers
             return RedirectToAction("Dashboard", "Admin");
         }
 
-        public IActionResult MenuList()
+        //public IActionResult MenuList()
+        //{
+        //    var menus = dbContext.Menus.ToList();
+        //    return View(menus); // Passes the list to the view
+        //}
+
+        public IActionResult FilterMenu(DateTime? startDate, DateTime? endDate)
         {
-            var menus = dbContext.Menus.ToList();
-            return View(menus); // Passes the list to the view
+            var query = dbContext.Menus.AsQueryable();
+
+            // If no filter is provided, default to the current week
+            if (!startDate.HasValue || !endDate.HasValue)
+            {
+                // Calculate start (Monday) and end (Sunday) of current week
+                var today = DateTime.Today;
+                int diff = (7 + (today.DayOfWeek - DayOfWeek.Monday)) % 7;
+                var weekStart = today.AddDays(-1 * diff).Date; // Monday
+                var weekEnd = weekStart.AddDays(6).Date;       // Sunday
+
+                startDate = weekStart;
+                endDate = weekEnd;
+            }
+
+            // Apply filter
+            query = query.Where(m => m.AvailabilityDate >= startDate.Value &&
+                                     m.AvailabilityDate <= endDate.Value);
+
+            var menus = query
+                .OrderBy(m => m.AvailabilityDate)
+                .ToList();
+
+            var model = new DashboardPageModel
+            {
+                StartDate = startDate,
+                EndDate = endDate,
+                Menus = menus
+            };
+
+            return View("Dashboard", model);
         }
+
+
 
         [HttpGet]
         public IActionResult ExpatMonthlyDeduction()
@@ -149,6 +187,52 @@ namespace JapaneseMealReservation.Controllers
                 }).ToList();
 
             return View(grouped);
+        }
+
+
+        // GET: /Admin/Search?query=abc
+        [HttpGet]
+        public async Task<IActionResult> Search(string query)
+        {
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                return Json(new List<object>());
+            }
+
+            var users = await dbContext.Users
+                .Where(u => u.FirstName.Contains(query) || u.LastName.Contains(query) || u.Email.Contains(query))
+                .Select(u => new {
+                    id = u.UserId,
+                    adid = u.EmployeeId,   // or your ADID field
+                    firstName = u.FirstName,
+                    lastName = u.LastName,
+                    email = u.Email,
+                    role = u.UserRole // Or use IdentityUserRole if you're using Identity
+                })
+                .ToListAsync();
+
+            return Json(users);
+        }
+
+        // POST: /Admin/UpdateRole/5
+        [HttpPost]
+        public async Task<IActionResult> UpdateRole(int id, [FromBody] RoleUpdateRequest request)
+        {
+            var user = await dbContext.Users.FindAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            user.UserRole = request.Role; // "EMPLOYEE" or "ADMIN"
+            await dbContext.SaveChangesAsync();
+
+            return Json(new { success = true });
+        }
+
+        public class RoleUpdateRequest
+        {
+            public string Role { get; set; }
         }
 
     }

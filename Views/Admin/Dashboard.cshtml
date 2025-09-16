@@ -29,7 +29,6 @@
 
     <!-- Stats Cards -->
     <div class="row g-3 mb-4 px-4">
-
         <div class="d-flex justify-content-between mt-5">
             <h1 class="" style="font-size: 32px;">Summary of Orders Today</h1>
             <div>
@@ -40,7 +39,6 @@
                     Upload Menu
                 </button>
             </div>
-          
         </div>
 
         <div class="col-md-2">
@@ -113,18 +111,39 @@
 
     @* Table *@
     <div class="row g-3 mb-4 px-4" >
-        <div>
-            <h1 class="mt-5" style="font-size: 32px;">List of Menu</h1>
+        <div class="d-flex justify-content-between align-items-center mt-5 mb-3">
+            <h1 class="" style="font-size: 32px;">List of Uploaded Menu</h1>
+
+            <!-- Date Filter -->
+            <form asp-controller="Admin" asp-action="FilterMenu" method="get" class="d-flex align-items-center gap-2">
+                <span class="mx-1">From</span>
+                <input type="date" name="startDate" id="startDate"
+                       value="@(Model.StartDate?.ToString("yyyy-MM-dd") ?? "")"
+                       class="form-control form-control-sm"
+                       style="border:none; border-bottom:1px solid #ccc; border-radius:0; background:transparent; padding-left:0; padding-right:0; box-shadow:none;" />
+
+                <span class="mx-1">to</span>
+                <input type="date" name="endDate" id="endDate"
+                       value="@(Model.EndDate?.ToString("yyyy-MM-dd") ?? "")"
+                       class="form-control form-control-sm"
+                       style="border:none; border-bottom:1px solid #ccc; border-radius:0; background:transparent; padding-left:0; padding-right:0; box-shadow:none;" />
+
+                <button type="submit" class="btn btn-sm btn-primary" style="height:32px;">Filter</button>
+            </form>
         </div>
-       
 
-        @if (Model != null)
+
+        @{
+            var filteredMenus = Model?.Menus?.OrderBy(m => m.AvailabilityDate).ToList();
+        }
+
+        @if (Model?.Menus != null && Model.Menus.Any())
         {
-
             <table class="table table-bordered text-center">
                 <thead>
                     <tr>
                         <th class="hide-col">Id</th>
+                        <th>Availability Date</th>
                         <th>Image</th>
                         <th>Name</th>
                         <th>Description</th>
@@ -134,11 +153,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model.Menus)
+                    @foreach (var item in Model.Menus.OrderBy(m => m.AvailabilityDate))
                     {
                         <tr>
                             <td class="hide-col">@item.Id</td>
-                                    <td class="text-center align-middle" >
+                            <td>
+                                @(item.AvailabilityDate.HasValue
+                                    ? item.AvailabilityDate.Value.ToString("MM/dd/yyyy")
+                                    : "No Date")
+                            </td>
+                            <td class="text-center align-middle">
                                 @if (!string.IsNullOrWhiteSpace(item.ImagePath))
                                 {
                                     <img src="..@item.ImagePath" alt="@item.Name" width="100" />
@@ -150,20 +174,21 @@
                                 }
                             </td>
 
-                            <td class="text-center align-middle" >@item?.Name</td>
+                            <td class="text-center align-middle">@item?.Name</td>
                             <td class="align-middle">@item?.Description</td>
                             <td class="align-middle">@item?.MenuType</td>
-                            <td class="text-center align-middle" >@item?.Price.ToString()</td>
+                            <td class="text-center align-middle">@item?.Price.ToString("C")</td>
                             <td class="d-flex justify-content-between align-items-center text-center align-middle" style="min-height: 50px;">
-                                <a
-                                    class="btn btn-warning" 
-                                    data-bs-toggle="modal" 
-                                    data-bs-target="#itemModal"
-                                    data-id="@item.Id"
-                                    data-image="..@item.ImagePath"
-                                    data-name="@item.Name"
-                                    data-price="@item.Price"
-                                   data-description="@item.Description"><i class="fa-solid fa-pen-to-square"></i> &nbsp; Update</a>
+                                <a class="btn btn-warning"
+                                   data-bs-toggle="modal"
+                                   data-bs-target="#itemModal"
+                                   data-id="@item.Id"
+                                   data-image="..@item.ImagePath"
+                                   data-name="@item.Name"
+                                   data-price="@item.Price"
+                                   data-description="@item.Description">
+                                    <i class="fa-solid fa-pen-to-square"></i> &nbsp; Update
+                                </a>
 
                                 <form asp-controller="Menu" asp-action="DeleteMenu" method="post" onsubmit="return confirm('Are you sure you want to delete this menu?');">
                                     <input type="hidden" name="id" value="@item.Id" />
@@ -179,8 +204,10 @@
         }
         else
         {
-            <p>No menu items found.</p>
+            <p>No menu items found for the selected date range.</p>
         }
+
+
     </div>
 </div>
 
@@ -250,4 +277,7 @@
         </div>
     </div>
 </div>
+
+
+
 

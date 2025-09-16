@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Security.Claims;
 using DocumentFormat.OpenXml.InkML;
+using DocumentFormat.OpenXml.Spreadsheet;
 using JapaneseMealReservation.AppData;
 using JapaneseMealReservation.Models;
 using JapaneseMealReservation.ViewModels;
@@ -35,58 +36,60 @@ namespace JapaneseMealReservation.Controllers
             return View();
         }
 
+        //UNCOMMNET THE LOGIN ACTION IF YOU WANT TO TEST IN DEVELOPMENT MODE
 
-        //[AllowAnonymous]
-        //public IActionResult Login()
-        //{
-        //    return View();
-        //}
+        [AllowAnonymous]
+        public IActionResult Login()
+        {
+            return View();
+        }
 
-        //[HttpPost]
-        //[AllowAnonymous]
-        //public async Task<IActionResult> Login(Login model)
-        //{
-        //    // Check if the submitted form model is valid
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return View(model); // Return the same view with validation messages
-        //    }
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Login(Login model)
+        {
+            // Check if the submitted form model is valid
+            if (!ModelState.IsValid)
+            {
+                return View(model); // Return the same view with validation messages
+            }
 
-        //    // Attempt to find a user in the database that matches the username and password
-        //    var user = dbContext.Users
-        //        .FirstOrDefault(user => user.EmployeeId == model.EmployeeId && user.Password == model.Password);
+            // Attempt to find a user in the database that matches the username and password
+            var user = dbContext.Users
+                .FirstOrDefault(user => user.EmployeeId == model.EmployeeId && user.Password == model.Password);
 
-        //    // If no user found, display an error message and return to the login view
-        //    if (user == null)
-        //    {
-        //        ViewBag.ErrorMessage = "Invalid username or password.";
-        //        return View(model);
-        //    }
+            // If no user found, display an error message and return to the login view
+            if (user == null)
+            {
+                ViewBag.ErrorMessage = "Invalid username or password.";
+                return View(model);
+            }
 
-        //    // Create a list of claims (user identity data), here storing the user's first name
-        //    var claims = new List<Claim>
-        //    {
-        //        new Claim("EmployeeId", user.EmployeeId ?? string.Empty),  // custom claim type string
-        //        new Claim(ClaimTypes.GivenName, user.FirstName ?? ""),
-        //        new Claim(ClaimTypes.Surname, user.LastName ?? ""),
-        //        new Claim(ClaimTypes.Email, user.Email ?? ""),
-        //        new Claim("Section", user.Section ?? ""),  // custom claim type string
-        //        new Claim(ClaimTypes.Role, user.UserRole ?? ""),
-        //        new Claim("EmployeeType", user.EmployeeType ?? "")
-        //    };
+            // Create a list of claims (user identity data), here storing the user's first name
+            var claims = new List<Claim>
+            {
+                new Claim("EmployeeId", user.EmployeeId ?? string.Empty),  // custom claim type string
+                new Claim(ClaimTypes.GivenName, user.FirstName ?? ""),
+                new Claim(ClaimTypes.Surname, user.LastName ?? ""),
+                new Claim(ClaimTypes.Email, user.Email ?? ""),
+                new Claim("Section", user.Section ?? ""),  // custom claim type string
+                new Claim(ClaimTypes.Role, user.UserRole ?? ""),
+                new Claim("EmployeeType", user.EmployeeType ?? ""),
+                new Claim("Position", user.Position?? "")
+            };
 
-        //    // Create a ClaimsIdentity using the claims and specify the authentication scheme
-        //    var identity = new ClaimsIdentity(claims, "MyCookieAuth");
+            // Create a ClaimsIdentity using the claims and specify the authentication scheme
+            var identity = new ClaimsIdentity(claims, "MyCookieAuth");
 
-        //    // Create a ClaimsPrincipal that holds the identity
-        //    var principal = new ClaimsPrincipal(identity);
+            // Create a ClaimsPrincipal that holds the identity
+            var principal = new ClaimsPrincipal(identity);
 
-        //    // Sign in the user by issuing the authentication cookie
-        //    await HttpContext.SignInAsync("MyCookieAuth", principal);
+            // Sign in the user by issuing the authentication cookie
+            await HttpContext.SignInAsync("MyCookieAuth", principal);
 
-        //    // Redirect the authenticated user to the welcome page
-        //    return RedirectToAction("Index", "Home");
-        //}
+            // Redirect the authenticated user to the welcome page
+            return RedirectToAction("Index", "Home");
+        }
 
 
 
@@ -131,74 +134,75 @@ namespace JapaneseMealReservation.Controllers
 
 
 
-        [HttpGet]
-        [AllowAnonymous]
-        public async Task<IActionResult> Login()
-        {
-            string localIP = GetClientIp(HttpContext); // use helper method
-            if (IPAddress.TryParse(localIP, out var ip))
-            {
-                if (ip.IsIPv4MappedToIPv6)
-                    localIP = ip.MapToIPv4().ToString(); // Force to IPv4 format
-            }
+        //[HttpGet]
+        //[AllowAnonymous]
+        //public async Task<IActionResult> Login()
+        //{
+        //    string localIP = GetClientIp(HttpContext); // use helper method
+        //    if (IPAddress.TryParse(localIP, out var ip))
+        //    {
+        //        if (ip.IsIPv4MappedToIPv6)
+        //            localIP = ip.MapToIPv4().ToString(); // Force to IPv4 format
+        //    }
 
-            Console.WriteLine($"Raw Remote IP: {HttpContext.Connection.RemoteIpAddress}");
-            Console.WriteLine($"Client IP: {GetClientIp(HttpContext)}");
+        //    Console.WriteLine($"Raw Remote IP: {HttpContext.Connection.RemoteIpAddress}");
+        //    Console.WriteLine($"Client IP: {GetClientIp(HttpContext)}");
 
-            long systemId = 70; // Change if needed
+        //    long systemId = 70; // Change if needed
 
-            Console.WriteLine($"Local IP: {localIP}");
+        //    Console.WriteLine($"Local IP: {localIP}");
 
-            //✅ Get the latest login request for the IP
-            var loginEntry = await sqlDbContext.Tbl_LOGIN_Request
-                .Where(x => x.IpAddress == localIP && x.SystemId == systemId)
-                .OrderByDescending(x => x.Id)
-                .FirstOrDefaultAsync();
+        //    //✅ Get the latest login request for the IP
+        //    var loginEntry = await sqlDbContext.Tbl_LOGIN_Request
+        //        .Where(x => x.IpAddress == localIP && x.SystemId == systemId)
+        //        .OrderByDescending(x => x.Id)
+        //        .FirstOrDefaultAsync();
 
-            //Condition 1: No login request OR
-            //Condition 2: Request found but not active or missing EmployeeId
-            if (loginEntry == null ||
-                string.IsNullOrWhiteSpace(loginEntry.EmployeeId) ||
-                !loginEntry.Status.Equals("ACTIVE", StringComparison.OrdinalIgnoreCase))
-            {
-                // Show the IportalConfirmationForm if not using WinForms app
-                return RedirectToAction("IportalConfirmationForm", "Home");
-                return View();
-            }
+        //    //Condition 1: No login request OR
+        //    //Condition 2: Request found but not active or missing EmployeeId
+        //    if (loginEntry == null ||
+        //        string.IsNullOrWhiteSpace(loginEntry.EmployeeId) ||
+        //        !loginEntry.Status.Equals("ACTIVE", StringComparison.OrdinalIgnoreCase))
+        //    {
+        //        // Show the IportalConfirmationForm if not using WinForms app
+        //        return RedirectToAction("IportalConfirmationForm", "Home");
+        //        return View();
+        //    }
 
-            //Lookup the Employee in your main Users table
-            var user = await dbContext.Users
-                .FirstOrDefaultAsync(x => x.EmployeeId == loginEntry.EmployeeId);
+        //    //Lookup the Employee in your main Users table
+        //    var user = await dbContext.Users
+        //        .FirstOrDefaultAsync(x => x.EmployeeId == loginEntry.EmployeeId);
 
-            if (user == null)
-            {
-                TempData["ShowRegisterAlert"] = true;
-                return RedirectToAction("Register", "Home");
-            }
+        //    if (user == null)
+        //    {
+        //        TempData["ShowRegisterAlert"] = true;
+        //        return RedirectToAction("Register", "Home");
+        //    }
 
-            //Sign in logic
-            var claims = new List<Claim>
-           {
-                new Claim("EmployeeId", user.EmployeeId ?? ""),
-                new Claim(ClaimTypes.GivenName, user.FirstName ?? ""),
-                new Claim(ClaimTypes.Surname, user.LastName ?? ""),
-                new Claim(ClaimTypes.Email, user.Email ?? ""),
-                new Claim("Section", user.Section ?? ""),
-                new Claim(ClaimTypes.Role, user.UserRole ?? ""),
-                new Claim("EmployeeType", user.EmployeeType ?? "")
-           };
+        //    //Sign in logic
+        //    var claims = new List<Claim>
+        //   {
+        //        new Claim("EmployeeId", user.EmployeeId ?? ""),
+        //        new Claim(ClaimTypes.GivenName, user.FirstName ?? ""),
+        //        new Claim(ClaimTypes.Surname, user.LastName ?? ""),
+        //        new Claim(ClaimTypes.Email, user.Email ?? ""),
+        //        new Claim("Section", user.Section ?? ""),
+        //        new Claim(ClaimTypes.Role, user.UserRole ?? ""),
+        //        new Claim("EmployeeType", user.EmployeeType ?? ""),
+        //            new Claim("Position", user.Position?? "")
+        //   };
 
-            Console.WriteLine("Redirecting to IportalConfirmationForm due to: " +
-            (loginEntry == null ? "No login entry" :
-            string.IsNullOrWhiteSpace(loginEntry.EmployeeId) ? "Missing EmployeeId" :
-            "Inactive status"));
+        //    Console.WriteLine("Redirecting to IportalConfirmationForm due to: " +
+        //    (loginEntry == null ? "No login entry" :
+        //    string.IsNullOrWhiteSpace(loginEntry.EmployeeId) ? "Missing EmployeeId" :
+        //    "Inactive status"));
 
-            var identity = new ClaimsIdentity(claims, "MyCookieAuth");
-            var principal = new ClaimsPrincipal(identity);
-            await HttpContext.SignInAsync("MyCookieAuth", principal);
+        //    var identity = new ClaimsIdentity(claims, "MyCookieAuth");
+        //    var principal = new ClaimsPrincipal(identity);
+        //    await HttpContext.SignInAsync("MyCookieAuth", principal);
 
-            return RedirectToAction("Index", "Home");
-        }
+        //    return RedirectToAction("Index", "Home");
+        //}
 
 
 
@@ -258,13 +262,23 @@ namespace JapaneseMealReservation.Controllers
                 return View(model);
             }
 
-            // Determine role and employee type (used in PostgreSQL save)
+            // Check if EmployeeId already exists
+            var existingUser = dbContext.Users
+                .FirstOrDefault(u => u.EmployeeId.Trim().ToUpper() == model.EmployeeId.Trim().ToUpper());
+
+            if (existingUser != null)
+            {
+                // Pass message to view using TempData
+                TempData["RegisterError"] = "Employee ID already exists!";
+                return RedirectToAction("Register");
+            }
+
+            // Continue with normal registration
             model.UserRole = model.Section?.ToUpper() == "GA" ? "ADMIN" : "EMPLOYEE";
             model.EmployeeType = model.EmployeeId?.Contains("BIPH-JP", StringComparison.OrdinalIgnoreCase) == true
                 ? "Expat"
                 : "Local";
 
-            // Exclude Position and ADID from PostgreSQL insert by creating a stripped model
             var pgUser = new User
             {
                 EmployeeId = model.EmployeeId,
@@ -275,15 +289,13 @@ namespace JapaneseMealReservation.Controllers
                 Password = model.Password,
                 CreatedDate = DateTime.UtcNow,
                 UserRole = model.UserRole,
-                EmployeeType = model.EmployeeType
-                // Do not assign Position and ADID here – they are not in the PostgreSQL 'users' table
+                EmployeeType = model.EmployeeType,
+                Position = model.Position
             };
 
-            // Save to PostgreSQL
             dbContext.Users.Add(pgUser);
             dbContext.SaveChanges();
 
-            // Save approver data to SQL Server (these fields may exist in SQL Server only)
             var newApprover = new CasSystemApproverList
             {
                 SystemID = "70",
@@ -300,9 +312,10 @@ namespace JapaneseMealReservation.Controllers
             sqlDbContext.Tbl_System_Approver_list.Add(newApprover);
             sqlDbContext.SaveChanges();
 
-            TempData["RegisterSuccess"] = true;
+            TempData["RegisterSuccess"] = "User registered successfully!";
             return RedirectToAction("Register");
         }
+
 
         //[AllowAnonymous]
         [HttpGet]

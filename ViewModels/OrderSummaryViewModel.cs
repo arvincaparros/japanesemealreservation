@@ -2,6 +2,10 @@
 {
     public class OrderSummaryViewModel
     {
+        //For Filtering of Menu
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+
         public string ReferenceNumber { get; set; }
         public string EmployeeId { get; set; }
         public string FirstName { get; set; }
@@ -12,10 +16,13 @@
         public DateTime ReservationDate { get; set; }
         public string MealTime { get; set; }
         public string MenuType { get; set; }
+        public string MenuName { get; set; }
         public string Status { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
 
         public decimal Total => Quantity * Price;
+
+     
     }
 }
